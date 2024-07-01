@@ -48,22 +48,40 @@
 
 /////////////////////////////////////////////////////////
 
-// Q3 Count charater in string 
+// Q3 Count charater in string
 
-const countChar = (str, char) => {
-    str = str.toLowerCase()
-    char = char.toLowerCase()
-    totalCount = str.split("").reduce((acc, curr) => {
-        // if (curr == char) {
-        //     acc += 1
-        // }
 
-        curr == char ? acc += 1 : ""
-        return acc
+// 1st approach
+// const countChar = (str, char) => {
+//     str = str.toLowerCase()
+//     char = char.toLowerCase()
+//     totalCount = str.split("").reduce((acc, curr) => {
+//         // method1
+//         // if (curr == char) {
+//         //     acc += 1
+//         // }
+//         // method2
+//         curr == char ? acc += 1 : ""
+//         return acc
 
-    }, 0)
-    // console.log(totalCount)
-    return totalCount
-}
+//     }, 0)
+//     // console.log(totalCount)
+//     return totalCount
+// }
 
-console.log(countChar("MissIssipii", "I"))
+// console.log(countChar("MissIssipii", "I"))
+
+// 2nd approach
+// const countCharacter = (str, char) => {
+//     str = str.toLowerCase();
+//     char = char.toLowerCase();
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === char) {
+//             count += 1;
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countCharacter("MissIssippii", "I"));
