@@ -85,3 +85,19 @@
 // }
 
 // console.log(countCharacter("MissIssippii", "I"));
+
+
+
+
+/////////////////////////////////////////////////
+
+// Q4 sort an array 
+
+const sortArray = (arr) => {
+    //assending
+    return arr.sort((a, b) => a - b)
+    //descending
+    // return arr.sort((a, b) => b - a)
+}
+const arr = [30, 1, 6, 200];
+console.log(sortArray(arr))
