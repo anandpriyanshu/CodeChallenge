@@ -46,4 +46,23 @@
 // console.log(generateHash("my name is Priyanshu anand"))
 
 
-/////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+// Q3 Count charater in string 
+
+const countChar = (str, char) => {
+    str = str.toLowerCase()
+    char = char.toLowerCase()
+    totalCount = str.split("").reduce((acc, curr) => {
+        // if (curr == char) {
+        //     acc += 1
+        // }
+
+        curr == char ? acc += 1 : ""
+        return acc
+
+    }, 0)
+    console.log(totalCount)
+}
+
+console.log(countChar("MissIssipii", "I"))
