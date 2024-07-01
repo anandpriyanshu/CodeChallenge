@@ -62,7 +62,8 @@ const countChar = (str, char) => {
         return acc
 
     }, 0)
-    console.log(totalCount)
+    // console.log(totalCount)
+    return totalCount
 }
 
 console.log(countChar("MissIssipii", "I"))
