@@ -146,15 +146,26 @@
 
 //////////////////////////////////////////////////
 
-// Q8 Factorial Number 
+// Q8 Factorial Number
 
-const Fact = (num) => {
-    let f = 1
-    for (let i = 1; i <= num; i++) {
-        f = f * i
-    }
-    return f
-}
+// const Fact = (num) => {
+//     let f = 1
+//     for (let i = 1; i <= num; i++) {
+//         f = f * i
+//     }
+//     return f
+// }
 
-console.log(Fact(7))
-console.log(Fact(0))
+// console.log(Fact(7))
+// console.log(Fact(0))
+
+
+
+
+
+///////////////////////////////////////////////////
+
+// Q9 Average of number
+
+const avgNum = (arr) => arr.reduce((acc, curr) => acc + curr, 0) / arr.length
+console.log(avgNum([1, 5, 3, 9]))
