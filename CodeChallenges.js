@@ -203,12 +203,12 @@
 
 //////////////////////////////////////////////////
 
-// Q12 removeDubliate 
+// Q12 removeDubliate
 
-const removeDublicate = (arr) => {
+// const removeDublicate = (arr) => {
 
-    const removed = [...new Set(arr)]
-    return removed
-}
-console.log(removeDublicate([1, 2, 3, 4, 2, 1]))
+//     const removed = [...new Set(arr)]
+//     return removed
+// }
+// console.log(removeDublicate([1, 2, 3, 4, 2, 1]))
 
