@@ -143,3 +143,18 @@
 // console.log(findMax([-1, 15, -3, -9, -2]))
 // console.log(findMax([5]))
 
+
+//////////////////////////////////////////////////
+
+// Q8 Factorial Number 
+
+const Fact = (num) => {
+    let f = 1
+    for (let i = 1; i <= num; i++) {
+        f = f * i
+    }
+    return f
+}
+
+console.log(Fact(7))
+console.log(Fact(0))
