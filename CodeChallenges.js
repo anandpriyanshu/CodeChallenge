@@ -180,10 +180,23 @@
 
 // Q10 two arrays are equal or not
 
-const equalArrays = (arr1, arr2) => {
-    if (arr1.length != arr2.length) {
-        return false
-    }
-    return arr1.every((currVal, index) => currVal === arr2[index])
+// const equalArrays = (arr1, arr2) => {
+//     if (arr1.length != arr2.length) {
+//         return false
+//     }
+//     return arr1.every((currVal, index) => currVal === arr2[index])
+// }
+// console.log(equalArrays([1, 2, 3, 4], [1, 2, 3, 4]))
+
+
+
+
+///////////////////////////////////////////////////
+
+// Q11 Sum of digit
+
+const sumOfDigit = (num) => {
+    let arr = Array.from(String(num), Number)
+    return arr.reduce((acc, curr) => acc += curr, 0)
 }
-console.log(equalArrays([1, 2, 3, 4], [1, 2, 3, 4]))
+console.log(sumOfDigit(123458))
