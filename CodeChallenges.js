@@ -91,13 +91,34 @@
 
 /////////////////////////////////////////////////
 
-// Q4 sort an array 
+// Q4 sort an array
 
-const sortArray = (arr) => {
-    //assending
-    return arr.sort((a, b) => a - b)
-    //descending
-    // return arr.sort((a, b) => b - a)
+// const sortArray = (arr) => {
+//     //assending
+//     return arr.sort((a, b) => a - b)
+//     //descending
+//     // return arr.sort((a, b) => b - a)
+// }
+// const arr = [30, 1, 6, 200];
+// console.log(sortArray(arr))
+
+
+
+/////////////////////////////////////////////////
+
+// Q6 palindrome of string 
+
+
+const isPalidrome = (str) => {
+
+    str = str.toLowerCase().replace(/\W/g, "")     //replace non-word  and this condtion for 1st example only
+    const revStr = str.split("").reverse().join("")
+    return str === revStr ? true : false
+    // console.log(revStr)
 }
-const arr = [30, 1, 6, 200];
-console.log(sortArray(arr))
+
+
+console.log(isPalidrome("A man, a plan , a canal, Panama"))
+console.log(isPalidrome("racecar"))
+console.log(isPalidrome("hellow"))
+
