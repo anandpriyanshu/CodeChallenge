@@ -106,19 +106,34 @@
 
 /////////////////////////////////////////////////
 
-// Q6 palindrome of string 
+// Q6 palindrome of string
 
 
-const isPalidrome = (str) => {
+// const isPalidrome = (str) => {
 
-    str = str.toLowerCase().replace(/\W/g, "")     //replace non-word  and this condtion for 1st example only
-    const revStr = str.split("").reverse().join("")
-    return str === revStr ? true : false
-    // console.log(revStr)
+//     str = str.toLowerCase().replace(/\W/g, "")     //replace non-word  and this condtion for 1st example only
+//     const revStr = str.split("").reverse().join("")
+//     return str === revStr ? true : false
+//     // console.log(revStr)
+// }
+
+
+// console.log(isPalidrome("A man, a plan , a canal, Panama"))
+// console.log(isPalidrome("racecar"))
+// console.log(isPalidrome("hellow"))
+
+
+//////////////////////////////////////////////////
+
+// Q7 findMax in array
+
+const findMax = (arr) => {
+    return Math.max(...arr)   //sapred operator converts from array into number
+    // return Math.max(arr) // 5
+
 }
 
-
-console.log(isPalidrome("A man, a plan , a canal, Panama"))
-console.log(isPalidrome("racecar"))
-console.log(isPalidrome("hellow"))
+console.log(findMax([1, 5, 3, 9, 2]))
+console.log(findMax([-1, 15, -3, -9, -2]))
+console.log(findMax([5]))
 
