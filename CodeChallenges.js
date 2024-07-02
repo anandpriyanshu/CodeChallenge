@@ -167,5 +167,24 @@
 
 // Q9 Average of number
 
-const avgNum = (arr) => arr.reduce((acc, curr) => acc + curr, 0) / arr.length
-console.log(avgNum([1, 5, 3, 9]))
+// const avgNum = (arr) => arr.reduce((acc, curr) => acc + curr, 0) / arr.length
+// console.log(avgNum([1, 5, 3, 9]))
+
+
+// let num = 0
+// console.log(num++)
+// console.log(++num)
+// console.log(num)
+
+//////////////////////////////////////////////////
+
+// Q10 two arrays are equal or not
+
+const equalArrays = (arr1, arr2) => {
+    if (arr1.length != arr2.length) {
+        return false
+    }
+
+    return arr1.every((currVal, index) => currVal === arr2[index])
+}
+console.log(equalArrays([1, 2, 3, 4], [1, 2, 3, 4]))
