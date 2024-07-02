@@ -195,8 +195,20 @@
 
 // Q11 Sum of digit
 
-const sumOfDigit = (num) => {
-    let arr = Array.from(String(num), Number)
-    return arr.reduce((acc, curr) => acc += curr, 0)
+// const sumOfDigit = (num) => {
+//     let arr = Array.from(String(num), Number)
+//     return arr.reduce((acc, curr) => acc += curr, 0)
+// }
+// console.log(sumOfDigit(123458))
+
+//////////////////////////////////////////////////
+
+// Q12 removeDubliate 
+
+const removeDublicate = (arr) => {
+
+    const removed = [...new Set(arr)]
+    return removed
 }
-console.log(sumOfDigit(123458))
+console.log(removeDublicate([1, 2, 3, 4, 2, 1]))
+
