@@ -127,13 +127,19 @@
 
 // Q7 findMax in array
 
-const findMax = (arr) => {
-    return Math.max(...arr)   //sapred operator converts from array into number
-    // return Math.max(arr) // 5
+// const findMax = (arr) => {
+//     return Math.max(...arr)   //sapred operator converts from array into number
+//     // return Math.max(arr) // 5
 
-}
+// }
+// 2nd approach
+// const findMax = (arr) => {
+//     return arr.reduce((acc, cur) => {
+//         return cur > acc ? cur : acc;
+//     }, 0);
+// }
 
-console.log(findMax([1, 5, 3, 9, 2]))
-console.log(findMax([-1, 15, -3, -9, -2]))
-console.log(findMax([5]))
+// console.log(findMax([1, 5, 3, 9, 2]))
+// console.log(findMax([-1, 15, -3, -9, -2]))
+// console.log(findMax([5]))
 
