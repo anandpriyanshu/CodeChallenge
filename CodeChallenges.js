@@ -184,7 +184,6 @@ const equalArrays = (arr1, arr2) => {
     if (arr1.length != arr2.length) {
         return false
     }
-
     return arr1.every((currVal, index) => currVal === arr2[index])
 }
 console.log(equalArrays([1, 2, 3, 4], [1, 2, 3, 4]))
