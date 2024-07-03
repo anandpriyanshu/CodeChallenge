@@ -204,7 +204,7 @@
 //////////////////////////////////////////////////
 
 // Q12 removeDubliate
-
+//removeDublicate in array
 // const removeDublicate = (arr) => {
 
 //     const removed = [...new Set(arr)]
@@ -212,3 +212,14 @@
 // }
 // console.log(removeDublicate([1, 2, 3, 4, 2, 1]))
 
+
+//removeDublicate in string
+
+// const removeDublicates = (str) => {
+
+//     const ans = [...new Set(str.split(" "))]
+//     return ans.join(" ")
+// }
+// console.log(removeDublicates("This is is a test test string string"))
+
+/////////////////////////////////////////////////////
