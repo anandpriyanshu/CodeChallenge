@@ -273,7 +273,7 @@
 
 /////////////////////////////////////////////////////////////////
 
-// Q15 Sum of square of array 
+// Q15 Sum of square of array
 
 // const SqureSum = (arr) => {
 
@@ -311,13 +311,26 @@
 
 // Q17 CheckUpperCase
 
-const upperCase = (chr) => {
-    // method - 1
-    // if (chr.charCodeAt(0) >= 65 && chr.charCodeAt(0) <= 90) {
-    //     return true
-    // }
-    // return false
-    // method - 2
-    return chr === chr.toUpperCase()
+// const upperCase = (chr) => {
+//     // method - 1
+//     // if (chr.charCodeAt(0) >= 65 && chr.charCodeAt(0) <= 90) {
+//     //     return true
+//     // }
+//     // return false
+//     // method - 2
+//     return chr === chr.toUpperCase()
+// }
+// console.log(upperCase("a"))
+
+
+/////////////////////////////////////////////////////////////
+
+// Q18 Reverse of String 
+const reverseStr = (str) => {
+    let revStr = ""
+    for (let i = str.length - 1; i >= 0; i--) {
+        revStr += str[i]
+    }
+    return revStr
 }
-console.log(upperCase("a"))
+console.log(reverseStr("hello"))
