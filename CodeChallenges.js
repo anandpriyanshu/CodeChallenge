@@ -254,3 +254,18 @@
 //     }, 0);
 // };
 // console.log(countVowels("The quick brown fox jump over lazy dog"))
+
+////////////////////////////////////////////////////////////
+
+// Q14 power of 2 
+const isPowerof2 = (num) => {
+    for (let i = 1; i < num; i++) {
+        if (2 ** i == num) {
+            return true
+        }
+    }
+    return false
+}
+
+console.log(isPowerof2(8))
+console.log(isPowerof2(7))
