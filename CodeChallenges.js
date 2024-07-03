@@ -223,3 +223,20 @@
 // console.log(removeDublicates("This is is a test test string string"))
 
 /////////////////////////////////////////////////////
+
+
+// Q13 countVowels
+
+const countVowels = (str) => {
+    let vowels = ['a', 'e', 'i', 'o', 'u']
+    let arr = str.split("")
+    let c = 0
+    for (let i of arr) {
+        // if (vowels.includes(i.toLowerCase())) {
+        //     c++
+        // }
+        vowels.includes(i.toLowerCase()) ? c++ : 0
+    }
+    return c
+}
+console.log(countVowels("The quick brown fox jump over lazy dog"))
