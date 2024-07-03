@@ -273,7 +273,7 @@
 
 /////////////////////////////////////////////////////////////////
 
-// Q15 Sum of square of array 
+// Q15 Sum of square of array
 
 // const SqureSum = (arr) => {
 
@@ -294,13 +294,27 @@
 
 // Q16 onvert string into cameslcase and snakeCase
 
-const camelCase = (str) => {
-    str = str.trim().split(" ")
+// const camelCase = (str) => {
+//     str = str.trim().split(" ")
 
-    str = str.map((curr, i) => {
-        if (i == 0) return curr.toLowerCase()
-        else return curr.charAt(0).toUpperCase() + curr.slice(1)
-    })
-    return str.join("")
-}
-console.log(camelCase("hello world anand"))
+//     str = str.map((curr, i) => {
+//         if (i == 0) return curr.toLowerCase()
+//         else return curr.charAt(0).toUpperCase() + curr.slice(1)
+//     })
+//     return str.join("")
+// }
+// console.log(camelCase("hello world anand"))
+
+
+
+//////////////////////////////////////////////////////////
+
+// Q17 CheckUpperCase
+
+// const upperCase = (chr) => {
+//     if (chr.charCodeAt(0) >= 65 && chr.charCodeAt(0) <= 90) {
+//         return true
+//     }
+//     return false
+// }
+// console.log(upperCase("a"))
