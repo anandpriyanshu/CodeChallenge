@@ -275,16 +275,32 @@
 
 // Q15 Sum of square of array 
 
-const SqureSum = (arr) => {
+// const SqureSum = (arr) => {
 
-    // using reduce method
-    // return arr.reduce((acc, curr) =>
-    //     (acc = acc + curr * curr), 0)
+//     // using reduce method
+//     // return arr.reduce((acc, curr) =>
+//     //     (acc = acc + curr * curr), 0)
+//     //normal method
+//     let s = 0
+//     for (let i of arr) {
+//         s = s + i * i
+//     }
+//     return s
+// }
+// console.log(SqureSum([1, 2, 3]))
 
-    let s = 0
-    for (let i of arr) {
-        s = s + i * i
-    }
-    return s
+//////////////////////////////////////////////////////////////
+
+
+// Q16 onvert string into cameslcase and snakeCase
+
+const camelCase = (str) => {
+    str = str.trim().split(" ")
+
+    str = str.map((curr, i) => {
+        if (i == 0) return curr.toLowerCase()
+        else return curr.charAt(0).toUpperCase() + curr.slice(1)
+    })
+    return str.join("")
 }
-console.log(SqureSum([1, 2, 3]))    
+console.log(camelCase("hello world anand"))
