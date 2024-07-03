@@ -273,7 +273,7 @@
 
 /////////////////////////////////////////////////////////////////
 
-// Q15 Sum of square of array
+// Q15 Sum of square of array 
 
 // const SqureSum = (arr) => {
 
@@ -311,10 +311,13 @@
 
 // Q17 CheckUpperCase
 
-// const upperCase = (chr) => {
-//     if (chr.charCodeAt(0) >= 65 && chr.charCodeAt(0) <= 90) {
-//         return true
-//     }
-//     return false
-// }
-// console.log(upperCase("a"))
+const upperCase = (chr) => {
+    // method - 1
+    // if (chr.charCodeAt(0) >= 65 && chr.charCodeAt(0) <= 90) {
+    //     return true
+    // }
+    // return false
+    // method - 2
+    return chr === chr.toUpperCase()
+}
+console.log(upperCase("a"))
