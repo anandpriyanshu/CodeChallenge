@@ -257,15 +257,34 @@
 
 ////////////////////////////////////////////////////////////
 
-// Q14 power of 2 
-const isPowerof2 = (num) => {
-    for (let i = 1; i < num; i++) {
-        if (2 ** i == num) {
-            return true
-        }
-    }
-    return false
-}
+// Q14 power of 2
+// const isPowerof2 = (num) => {
+//     for (let i = 1; i < num; i++) {
+//         if (2 ** i == num) {
+//             return true
+//         }
+//     }
+//     return false
+// }
 
-console.log(isPowerof2(8))
-console.log(isPowerof2(7))
+// console.log(isPowerof2(8))
+// console.log(isPowerof2(7))
+
+
+/////////////////////////////////////////////////////////////////
+
+// Q15 Sum of square of array 
+
+const SqureSum = (arr) => {
+
+    // using reduce method
+    // return arr.reduce((acc, curr) =>
+    //     (acc = acc + curr * curr), 0)
+
+    let s = 0
+    for (let i of arr) {
+        s = s + i * i
+    }
+    return s
+}
+console.log(SqureSum([1, 2, 3]))    
