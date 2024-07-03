@@ -227,16 +227,30 @@
 
 // Q13 countVowels
 
-const countVowels = (str) => {
-    let vowels = ['a', 'e', 'i', 'o', 'u']
-    let arr = str.split("")
-    let c = 0
-    for (let i of arr) {
-        // if (vowels.includes(i.toLowerCase())) {
-        //     c++
-        // }
-        vowels.includes(i.toLowerCase()) ? c++ : 0
-    }
-    return c
-}
-console.log(countVowels("The quick brown fox jump over lazy dog"))
+// const countVowels = (str) => {
+//     let vowels = ['a', 'e', 'i', 'o', 'u']
+//     let arr = str.split("")
+//     let c = 0
+//     for (let i of arr) {
+//         // if (vowels.includes(i.toLowerCase())) {
+//         //     c++
+//         // }
+//         vowels.includes(i.toLowerCase()) ? c++ : 0
+//     }
+//     return c
+// }
+// console.log(countVowels("The quick brown fox jump over lazy dog"))
+
+//  using reduce method
+
+// const countVowels = (str) => {
+//     const vowels = ["a", "e", "i", "o", "u"];
+//     const arr = str.toLowerCase().split("");
+
+//     return arr.reduce((acc, currVal) => {
+//         vowels.includes(currVal) ? acc++ : acc;
+
+//         return acc;
+//     }, 0);
+// };
+// console.log(countVowels("The quick brown fox jump over lazy dog"))
