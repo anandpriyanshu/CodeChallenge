@@ -325,12 +325,27 @@
 
 /////////////////////////////////////////////////////////////
 
-// Q18 Reverse of String 
-const reverseStr = (str) => {
-    let revStr = ""
-    for (let i = str.length - 1; i >= 0; i--) {
-        revStr += str[i]
+// Q18 Reverse of String
+// const reverseStr = (str) => {
+//     let revStr = ""
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         revStr += str[i]
+//     }
+//     return revStr
+// }
+// console.log(reverseStr("hello"))
+
+
+///////////////////////////////////////////////////////////////
+
+// Q19  FindMedian
+
+const FindMedian = (arr) => {
+    let length = arr.length
+    let mid = Math.floor(length / 2)
+    if (length % 2 == 0) {
+        return (arr[mid] + arr[mid - 1]) / 2
     }
-    return revStr
+    return arr[mid]
 }
-console.log(reverseStr("hello"))
+console.log(FindMedian([1, 5, 12, 4, 3, 8]))
