@@ -391,3 +391,11 @@ console.log(FindMedian([1, 5, 12, 4, 3, 8]))
 
 // const arr = [1, 2, 2, 3, 1, 1, 3, 3, 4, 5, 5, 5, 5, 5, 5, 5, 5]
 // console.log((Mid(arr)))
+/////////////////////////////////////////////////////////////
+
+// Q22 RepeatString 
+
+const repeatString = (str, num) => {
+    return num > 0 ? str.repeat(num) : str
+}
+console.log(repeatString("abc", 3))
