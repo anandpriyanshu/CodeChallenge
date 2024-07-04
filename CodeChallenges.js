@@ -349,3 +349,24 @@ const FindMedian = (arr) => {
     return arr[mid]
 }
 console.log(FindMedian([1, 5, 12, 4, 3, 8]))
+
+
+
+////////////////////////////////////////////////////////////
+
+// Q20 
+
+const CounNumber = (arr) => {
+    const count = {}
+    for (let i of arr) {
+        if (i in count) {
+            count[i] += 1
+        } else {
+            count[i] = 1
+        }
+    }
+    return count
+
+
+}
+console.log(CounNumber([1, 2, 1, 2, 3, 1, 3, 4, 5, 4, 5]))
