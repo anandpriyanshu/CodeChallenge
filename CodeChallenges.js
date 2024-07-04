@@ -372,3 +372,22 @@ console.log(FindMedian([1, 5, 12, 4, 3, 8]))
 //     return count
 // }
 // console.log(CounNumber([1, 2, 1, 2, 3, 1, 3, 4, 5, 4, 5]))
+
+//////////////////////////////////////////////////////////
+
+// Q21 Coun max TimeRanges
+
+// const Mid = (arr) => {
+//     const d = {}
+//     let maxNum = 0
+//     for (let u of arr) {
+//         d[u] = (d[u] || 0) + 1
+//         if (d[u] > maxNum) {
+//             maxNum = u
+//         }
+//     }
+//     return maxNum
+// }
+
+// const arr = [1, 2, 2, 3, 1, 1, 3, 3, 4, 5, 5, 5, 5, 5, 5, 5, 5]
+// console.log((Mid(arr)))
