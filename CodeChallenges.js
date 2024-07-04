@@ -354,19 +354,21 @@ console.log(FindMedian([1, 5, 12, 4, 3, 8]))
 
 ////////////////////////////////////////////////////////////
 
-// Q20 
+// Q20 coountNumber in array
 
-const CounNumber = (arr) => {
-    const count = {}
-    for (let i of arr) {
-        if (i in count) {
-            count[i] += 1
-        } else {
-            count[i] = 1
-        }
-    }
-    return count
+// const CounNumber = (arr) => {
+//     const count = {}
 
-
-}
-console.log(CounNumber([1, 2, 1, 2, 3, 1, 3, 4, 5, 4, 5]))
+//     for (let i of arr) {
+//         //m1
+//         // if (i in count) {
+//         //     count[i] += 1
+//         // } else {
+//         //     count[i] = 1
+//         // }
+//         //m2
+//         count[i] = (count[i] || 0) + 1
+//     }
+//     return count
+// }
+// console.log(CounNumber([1, 2, 1, 2, 3, 1, 3, 4, 5, 4, 5]))
