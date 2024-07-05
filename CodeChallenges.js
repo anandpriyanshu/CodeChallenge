@@ -400,6 +400,8 @@
 // }
 // console.log(repeatString("abc", 5))
 
+/////////////////////////////////////////////////////////////
+
 
 // Q23 truncateString
 
@@ -416,3 +418,17 @@
 //     // return count <= 0 ? str : str.slice(0, count).concat("...")
 // }
 // console.log(truncateString("The-tickets is necessary for movies", 10))
+
+///////////////////////////////////////////////////////////////////
+
+// Q24 RangePrint
+
+const RangePrint = (a, b) => {
+    let arr = []
+    for (i = a; i <= b; i++) {
+        arr.push(i)
+    }
+    return arr
+}
+console.log(RangePrint(2, 7))
+console.log(RangePrint(-2, 2))
