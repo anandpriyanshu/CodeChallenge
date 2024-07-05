@@ -340,15 +340,15 @@
 
 // Q19  FindMedian
 
-const FindMedian = (arr) => {
-    let length = arr.length
-    let mid = Math.floor(length / 2)
-    if (length % 2 == 0) {
-        return (arr[mid] + arr[mid - 1]) / 2
-    }
-    return arr[mid]
-}
-console.log(FindMedian([1, 5, 12, 4, 3, 8]))
+// const FindMedian = (arr) => {
+//     let length = arr.length
+//     let mid = Math.floor(length / 2)
+//     if (length % 2 == 0) {
+//         return (arr[mid] + arr[mid - 1]) / 2
+//     }
+//     return arr[mid]
+// }
+// console.log(FindMedian([1, 5, 12, 4, 3, 8]))
 
 
 
@@ -393,9 +393,26 @@ console.log(FindMedian([1, 5, 12, 4, 3, 8]))
 // console.log((Mid(arr)))
 /////////////////////////////////////////////////////////////
 
-// Q22 RepeatString 
+// Q22 RepeatString
 
-const repeatString = (str, num) => {
-    return num > 0 ? str.repeat(num) : str
-}
-console.log(repeatString("abc", 3))
+// const repeatString = (str, num) => {
+//     return num > 0 ? str.repeat(num) : str
+// }
+// console.log(repeatString("abc", 5))
+
+
+// Q23 truncateString
+
+// const truncateString = (str, count) => {
+//     // m1
+//     if (count <= 0) {
+//         return str
+//     }
+
+//     else if (count < str.length) {
+//         return str.slice(0, count).concat("...")
+//     }
+//     //M2
+//     // return count <= 0 ? str : str.slice(0, count).concat("...")
+// }
+// console.log(truncateString("The-tickets is necessary for movies", 10))
