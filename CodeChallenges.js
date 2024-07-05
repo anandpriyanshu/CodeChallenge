@@ -423,12 +423,26 @@
 
 // Q24 RangePrint
 
-const RangePrint = (a, b) => {
-    let arr = []
-    for (i = a; i <= b; i++) {
-        arr.push(i)
+// const RangePrint = (a, b) => {
+//     let arr = []
+//     for (i = a; i <= b; i++) {
+//         arr.push(i)
+//     }
+//     return arr
+// }
+// console.log(RangePrint(2, 7))
+// console.log(RangePrint(-2, 2))
+
+
+///////////////////////////////////////////////////////////////////
+
+// Q25 RangeGenerator using recursion
+
+const RangeGenerator = (a, b, arr = []) => {
+    if (a <= b) {
+        arr.push(a)
+        return RangeGenerator(a + 1, b, arr)
     }
     return arr
 }
-console.log(RangePrint(2, 7))
-console.log(RangePrint(-2, 2))
+console.log(RangeGenerator(2, 7))
