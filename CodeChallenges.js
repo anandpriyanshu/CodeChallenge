@@ -459,28 +459,39 @@
 //////////////////////////////////////////////////////////////
 
 
-// Q26 passwordValidator 
+// Q26 passwordValidator
 
-const passwordValidator = (pswd) => {
-    let hasUpper = false
-    let hasLower = false
-    let hasNumber = false
+// const passwordValidator = (pswd) => {
+//     let hasUpper = false
+//     let hasLower = false
+//     let hasNumber = false
 
-    for (let char of pswd) {
-        if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) {
-            hasUpper = true
-        }
-        else if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
-            hasLower = true
-        }
-        else if (!isNaN(Number(char))) {
-            hasNumber = true
+//     for (let char of pswd) {
+//         if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) {
+//             hasUpper = true
+//         }
+//         else if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
+//             hasLower = true
+//         }
+//         else if (!isNaN(Number(char))) {
+//             hasNumber = true
 
-        }
-    }
-    if (!hasUpper || !hasLower || !hasNumber || pswd.length < 8) {
-        return false
-    }
-    return true
+//         }
+//     }
+//     if (!hasUpper || !hasLower || !hasNumber || pswd.length < 8) {
+//         return false
+//     }
+//     return true
+// }
+// console.log(passwordValidator("uhbscdjkncj"))
+
+
+////////////////////////////////////////////////////////
+
+// Q27 randomHexColor 
+
+const randomHexColor = () => {
+    return `#${Math.random().toString(16).slice(2, 8)}`
 }
-console.log(passwordValidator("uhbscdjkncj"))
+
+console.log(randomHexColor())
