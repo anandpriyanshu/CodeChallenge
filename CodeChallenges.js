@@ -215,11 +215,11 @@
 // console.log(removeDublicate([1, 2, 3, 4, 2, 1]))
 
 //M2
-const arr = [1, 2, 3, 4, 2, 1]
-const removeDublicate = arr.filter((val, i, self) => {
-    return self.indexOf(val) == i
-})
-console.log(removeDublicate)
+// const arr = [1, 2, 3, 4, 2, 1]
+// const removeDublicate = arr.filter((val, i, self) => {
+//     return self.indexOf(val) == i
+// })
+// console.log(removeDublicate)
 
 
 //removeDublicate in string
@@ -455,3 +455,32 @@ console.log(removeDublicate)
 //     return arr
 // }
 // console.log(RangeGenerator(2, 7))
+
+//////////////////////////////////////////////////////////////
+
+
+// Q26 passwordValidator 
+
+const passwordValidator = (pswd) => {
+    let hasUpper = false
+    let hasLower = false
+    let hasNumber = false
+
+    for (let char of pswd) {
+        if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) {
+            hasUpper = true
+        }
+        else if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
+            hasLower = true
+        }
+        else if (!isNaN(Number(char))) {
+            hasNumber = true
+
+        }
+    }
+    if (!hasUpper || !hasLower || !hasNumber || pswd.length < 8) {
+        return false
+    }
+    return true
+}
+console.log(passwordValidator("uhbscdjkncj"))
