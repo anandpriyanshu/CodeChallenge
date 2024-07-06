@@ -203,14 +203,23 @@
 
 //////////////////////////////////////////////////
 
-// Q12 removeDubliate
-//removeDublicate in array
+
+// Q12  removeDublicate in array
+
+//M1
 // const removeDublicate = (arr) => {
 
 //     const removed = [...new Set(arr)]
 //     return removed
 // }
 // console.log(removeDublicate([1, 2, 3, 4, 2, 1]))
+
+//M2
+const arr = [1, 2, 3, 4, 2, 1]
+const removeDublicate = arr.filter((val, i, self) => {
+    return self.indexOf(val) == i
+})
+console.log(removeDublicate)
 
 
 //removeDublicate in string
@@ -438,11 +447,11 @@
 
 // Q25 RangeGenerator using recursion
 
-const RangeGenerator = (a, b, arr = []) => {
-    if (a <= b) {
-        arr.push(a)
-        return RangeGenerator(a + 1, b, arr)
-    }
-    return arr
-}
-console.log(RangeGenerator(2, 7))
+// const RangeGenerator = (a, b, arr = []) => {
+//     if (a <= b) {
+//         arr.push(a)
+//         return RangeGenerator(a + 1, b, arr)
+//     }
+//     return arr
+// }
+// console.log(RangeGenerator(2, 7))
