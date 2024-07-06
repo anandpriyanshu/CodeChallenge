@@ -488,10 +488,27 @@
 
 ////////////////////////////////////////////////////////
 
-// Q27 randomHexColor 
+// Q27 randomHexColor
 
-const randomHexColor = () => {
-    return `#${Math.random().toString(16).slice(2, 8)}`
+// const randomHexColor = () => {
+//     return `#${Math.random().toString(16).slice(2, 8)}`
+// }
+
+// console.log(randomHexColor())
+
+
+//////////////////////////////////////////////////////
+
+// Q28 iSEmptyObject 
+
+const iSEmptyObject = (obj) => {
+    // for (let key in obj) {
+    //     if (obj.hasOwnProperty(key)) {
+    //         return `it's not empty`
+    //     }
+    // }
+    // return `it's empty`
+    //M2
+    return Object.keys(obj).length === 0
 }
-
-console.log(randomHexColor())
+console.log(iSEmptyObject({ name: "Anand" }))
