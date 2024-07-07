@@ -499,16 +499,29 @@
 
 //////////////////////////////////////////////////////
 
-// Q28 iSEmptyObject 
+// Q28 iSEmptyObject
 
-const iSEmptyObject = (obj) => {
-    // for (let key in obj) {
-    //     if (obj.hasOwnProperty(key)) {
-    //         return `it's not empty`
-    //     }
-    // }
-    // return `it's empty`
-    //M2
-    return Object.keys(obj).length === 0
+// const iSEmptyObject = (obj) => {
+//     // for (let key in obj) {
+//     //     if (obj.hasOwnProperty(key)) {
+//     //         return `it's not empty`
+//     //     }
+//     // }
+//     // return `it's empty`
+//     //M2
+//     return Object.keys(obj).length === 0
+// }
+// console.log(iSEmptyObject({ name: "Anand" }))
+
+
+//////////////////////////////////////////////////////
+
+// Q29 Convert Object into Array and Array into Object
+const obj = {
+    nam: "Anand", age: 24, city: "Ghorawal"
 }
-console.log(iSEmptyObject({ name: "Anand" }))
+let obj2Arr = Object.entries(obj)
+console.log(obj2Arr.flat())
+
+let Arr2Obj = Object.fromEntries(obj2Arr)
+console.log(Arr2Obj)
