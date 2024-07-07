@@ -517,11 +517,23 @@
 //////////////////////////////////////////////////////
 
 // Q29 Convert Object into Array and Array into Object
-const obj = {
-    nam: "Anand", age: 24, city: "Ghorawal"
-}
-let obj2Arr = Object.entries(obj)
-console.log(obj2Arr.flat())
+// const obj = {
+//     nam: "Anand", age: 24, city: "Ghorawal"
+// }
+// let obj2Arr = Object.entries(obj)
+// console.log(obj2Arr.flat())
 
-let Arr2Obj = Object.fromEntries(obj2Arr)
-console.log(Arr2Obj)
+// let Arr2Obj = Object.fromEntries(obj2Arr)
+// console.log(Arr2Obj)
+
+
+// Q30  Calculate age between two dates
+
+const CalculateBWDates = (d1, d2) => {
+    let date1 = new Date(d1)
+    let date2 = new Date(d2)
+    let diff = Math.abs(date2 - date1)
+    return diff / (24 * 60 * 60 * 1000)
+
+}
+console.log(CalculateBWDates("2024-01-01", "2025-01-31"))
