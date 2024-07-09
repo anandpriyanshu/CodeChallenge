@@ -540,20 +540,46 @@
 
 
 /////////////////////////////////////////////////////////
-Q31 calculateAge
-const calculateAge = (birthDate) => {
-    let todayDate = new Date()
-    birthDate = new Date(birthDate)
+// Q31 calculateAge
+// const calculateAge = (birthDate) => {
+//     let todayDate = new Date()
+//     birthDate = new Date(birthDate)
 
-    let age = todayDate.getFullYear() - birthDate.getFullYear()
+//     let age = todayDate.getFullYear() - birthDate.getFullYear()
 
-    let monthDiff = todayDate.getMonth() - birthDate.getMonth()
+//     let monthDiff = todayDate.getMonth() - birthDate.getMonth()
 
-    if (monthDiff < 0 || monthDiff == 0 && todayDate.getDate() < birthDate.getDate()) {
-        age--
-    }
-    return age
+//     if (monthDiff < 0 || monthDiff == 0 && todayDate.getDate() < birthDate.getDate()) {
+//         age--
+//     }
+//     return age
+// }
+// console.log(calculateAge("1999-08-12"))
 
+
+///////////////////////////////////////////////////////
+
+// Q32 convertIntoStar 
+
+const convertIntoStar = (arr) => {
+
+    //m1
+    // const newArr = arr.map((curr, i) => {
+    //     let star = ""
+    //     let num = 0
+    //     while (num < curr) {
+    //         star = star + "*"
+    //         num++
+    //     }
+    //     return `${i + 1}: ${star}`
+    // })
+    // return newArr.join(" \n")
+
+    //m2
+
+    return arr.map((curr, i) => {
+        return `${i + 1} : ${"*".repeat(curr)
+            }`
+    }).join("\n")
 }
-
-console.log(calculateAge("1999-08-12"))
+console.log(convertIntoStar([5, 2, 10, 4]))
