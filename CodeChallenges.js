@@ -529,11 +529,31 @@
 
 // Q30  Calculate age between two dates
 
-const CalculateBWDates = (d1, d2) => {
-    let date1 = new Date(d1)
-    let date2 = new Date(d2)
-    let diff = Math.abs(date2 - date1)
-    return diff / (24 * 60 * 60 * 1000)
+// const CalculateBWDates = (d1, d2) => {
+//     let date1 = new Date(d1)
+//     let date2 = new Date(d2)
+//     let diff = Math.abs(date2 - date1)
+//     return diff / (24 * 60 * 60 * 1000)
+
+// }
+// console.log(CalculateBWDates("2024-01-01", "2025-01-31"))
+
+
+/////////////////////////////////////////////////////////
+Q31 calculateAge
+const calculateAge = (birthDate) => {
+    let todayDate = new Date()
+    birthDate = new Date(birthDate)
+
+    let age = todayDate.getFullYear() - birthDate.getFullYear()
+
+    let monthDiff = todayDate.getMonth() - birthDate.getMonth()
+
+    if (monthDiff < 0 || monthDiff == 0 && todayDate.getDate() < birthDate.getDate()) {
+        age--
+    }
+    return age
 
 }
-console.log(CalculateBWDates("2024-01-01", "2025-01-31"))
+
+console.log(calculateAge("1999-08-12"))
