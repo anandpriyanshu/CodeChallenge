@@ -590,24 +590,45 @@
 
 // Q33 credit/debit Card Validate
 
-const cardValidate = (str) => {
-    str = str.replace(/\D/g, "")  //remove non-digit
-    revStr = ""
-    for (let i = str.length - 1; i >= 0; i--) {
-        revStr += str[i]
-    }
+// const cardValidate = (str) => {
+//     str = str.replace(/\D/g, "")  //remove non-digit
+//     revStr = ""
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         revStr += str[i]
+//     }
 
-    let doubleNum = revStr.split("").map((curr, i) => {
-        if (i % 2 != 0) {
-            curr = curr * 2
-            if (curr > 9) {
-                curr = curr - 9
-            } else {
-                curr = curr
-            }
-        }
-        return curr
-    }).reduce((acc, curr) => acc + Number(curr), 0)
-    return doubleNum % 10 == 0
-}
-console.log(cardValidate("4539 1488 0343 6467"))
+//     let doubleNum = revStr.split("").map((curr, i) => {
+//         if (i % 2 != 0) {
+//             curr = curr * 2
+//             if (curr > 9) {
+//                 curr = curr - 9
+//             } else {
+//                 curr = curr
+//             }
+//         }
+//         return curr
+//     }).reduce((acc, curr) => acc + Number(curr), 0)
+//     return doubleNum % 10 == 0
+// }
+// console.log(cardValidate("4539 1488 0343 6467"))
+
+
+// Q34 FizzBuzz
+
+// const fizzBuzz = (n1, n2) => {
+//     let arr = []
+//     for (let i = n1; i <= n2; i++) {
+//         console.log(i)
+//         if (i % 3 == 0 && i % 5 == 0) {
+//             arr.push("FizzBuzz")
+//         } else if (i % 5 == 0) {
+//             arr.push("Buzz")
+//         } else if (i % 3 == 0) {
+//             arr.push("Fizz")
+//         } else {
+//             arr.push(i)
+//         }
+//     }
+//     return arr
+// }
+// console.log(fizzBuzz(12, 20))
