@@ -139,6 +139,7 @@
 //     }, 0);
 // }
 
+
 // console.log(findMax([1, 5, 3, 9, 2]))
 // console.log(findMax([-1, 15, -3, -9, -2]))
 // console.log(findMax([5]))
@@ -559,27 +560,54 @@
 
 ///////////////////////////////////////////////////////
 
-// Q32 convertIntoStar 
+// Q32 convertIntoStar
 
-const convertIntoStar = (arr) => {
+// const convertIntoStar = (arr) => {
 
-    //m1
-    // const newArr = arr.map((curr, i) => {
-    //     let star = ""
-    //     let num = 0
-    //     while (num < curr) {
-    //         star = star + "*"
-    //         num++
-    //     }
-    //     return `${i + 1}: ${star}`
-    // })
-    // return newArr.join(" \n")
+//     //m1
+//     // const newArr = arr.map((curr, i) => {
+//     //     let star = ""
+//     //     let num = 0
+//     //     while (num < curr) {
+//     //         star = star + "*"
+//     //         num++
+//     //     }
+//     //     return `${i + 1}: ${star}`
+//     // })
+//     // return newArr.join(" \n")
 
-    //m2
+//     //m2
 
-    return arr.map((curr, i) => {
-        return `${i + 1} : ${"*".repeat(curr)
-            }`
-    }).join("\n")
+//     return arr.map((curr, i) => {
+//         return `${i + 1} : ${"*".repeat(curr)
+//             }`
+//     }).join("\n")
+// }
+// console.log(convertIntoStar([5, 2, 10, 4]))
+
+
+///////////////////////////////////////////////////////////
+
+// Q33 credit/debit Card Validate
+
+const cardValidate = (str) => {
+    str = str.replace(/\D/g, "")  //remove non-digit
+    revStr = ""
+    for (let i = str.length - 1; i >= 0; i--) {
+        revStr += str[i]
+    }
+
+    let doubleNum = revStr.split("").map((curr, i) => {
+        if (i % 2 != 0) {
+            curr = curr * 2
+            if (curr > 9) {
+                curr = curr - 9
+            } else {
+                curr = curr
+            }
+        }
+        return curr
+    }).reduce((acc, curr) => acc + Number(curr), 0)
+    return doubleNum % 10 == 0
 }
-console.log(convertIntoStar([5, 2, 10, 4]))
+console.log(cardValidate("4539 1488 0343 6467"))
