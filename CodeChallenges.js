@@ -636,8 +636,20 @@
 /////////////////////////////////////////////////////
 // Q35 ExtractNumber from string
 
-const exTractNum = (str) => {
-    const regex = /\d+/g
-    return str.match(regex)
+// const exTractNum = (str) => {
+//     const regex = /\d+/g
+//     return str.match(regex)
+// }
+// console.log(exTractNum("abc12345sdhubdnj456789"))
+
+
+// Q36 validateHexColor 
+
+const velidateHexColor = (str) => {
+    return /#([A-Fa-f\d]{3}|[A-Fa-f\d]{6})$/.test(str)
 }
-console.log(exTractNum("abc12345sdhubdnj456789"))
+
+console.log(velidateHexColor("#a3c113"))
+console.log(velidateHexColor("#a3c13"))
+console.log(velidateHexColor("#b3dc113"))
+console.log(velidateHexColor("#a113"))
