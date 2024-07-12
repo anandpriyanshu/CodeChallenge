@@ -632,3 +632,12 @@
 //     return arr
 // }
 // console.log(fizzBuzz(12, 20))
+
+/////////////////////////////////////////////////////
+// Q35 ExtractNumber from string
+
+const exTractNum = (str) => {
+    const regex = /\d+/g
+    return str.match(regex)
+}
+console.log(exTractNum("abc12345sdhubdnj456789"))
