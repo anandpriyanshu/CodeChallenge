@@ -643,13 +643,24 @@
 // console.log(exTractNum("abc12345sdhubdnj456789"))
 
 
-// Q36 validateHexColor 
+// Q36 validateHexColor
 
-const velidateHexColor = (str) => {
-    return /#([A-Fa-f\d]{3}|[A-Fa-f\d]{6})$/.test(str)
+// const velidateHexColor = (str) => {
+//     return /#([A-Fa-f\d]{3}|[A-Fa-f\d]{6})$/.test(str)
+// }
+
+// console.log(velidateHexColor("#a3c113"))
+// console.log(velidateHexColor("#a3c13"))
+// console.log(velidateHexColor("#b3dc113"))
+// console.log(velidateHexColor("#a113"))
+
+
+
+// Q37  findDublicate in Arr
+
+const findDublicate = (arr) => {
+
+    return arr.filter((curr, i, arr) => arr.indexOf(curr) !== i)
 }
 
-console.log(velidateHexColor("#a3c113"))
-console.log(velidateHexColor("#a3c13"))
-console.log(velidateHexColor("#b3dc113"))
-console.log(velidateHexColor("#a113"))
+console.log(findDublicate([1, 2, 1, 3, 2, 4, 3, 5, 6]))
