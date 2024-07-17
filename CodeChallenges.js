@@ -658,9 +658,20 @@
 
 // Q37  findDublicate in Arr
 
-const findDublicate = (arr) => {
+// const findDublicate = (arr) => {
 
-    return arr.filter((curr, i, arr) => arr.indexOf(curr) !== i)
+//     return arr.filter((curr, i, arr) => arr.indexOf(curr) !== i)
+// }
+
+// console.log(findDublicate([1, 2, 1, 3, 2, 4, 3, 5, 6]))
+
+// Q38 findMax in Array
+
+const maxNum = (arr) => {
+
+    return arr.reduce((acc, curr) => {
+        return curr > acc ? curr : acc
+    }, 0)
 }
 
-console.log(findDublicate([1, 2, 1, 3, 2, 4, 3, 5, 6]))
+console.log(maxNum([1, 56, 3, 889, 10]))
