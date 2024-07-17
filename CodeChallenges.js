@@ -668,10 +668,14 @@
 // Q38 findMax in Array
 
 const maxNum = (arr) => {
+    //m1
+    // return arr.reduce((acc, curr) => {
+    //     return curr > acc ? curr : acc
+    // }, 0)
 
-    return arr.reduce((acc, curr) => {
-        return curr > acc ? curr : acc
-    }, 0)
+    //m2
+
+    return Math.max(...arr)
 }
 
 console.log(maxNum([1, 56, 3, 889, 10]))
