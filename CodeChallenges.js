@@ -667,15 +667,30 @@
 
 // Q38 findMax in Array
 
-const maxNum = (arr) => {
-    //m1
-    // return arr.reduce((acc, curr) => {
-    //     return curr > acc ? curr : acc
-    // }, 0)
+// const maxNum = (arr) => {
+//     //m1
+//     // return arr.reduce((acc, curr) => {
+//     //     return curr > acc ? curr : acc
+//     // }, 0)
 
-    //m2
+//     //m2
 
-    return Math.max(...arr)
+//     return Math.max(...arr)
+// }
+
+// console.log(maxNum([1, 56, 3, 889, 10]))
+
+
+// Q39 findMissNum
+
+const findMissNum = (arr) => {
+    let li = []
+
+    for (let i = 1; i <= arr.length + 1; i++) {
+        if (!arr.includes(i)) {
+            li.push(i)
+        }
+    }
+    return li
 }
-
-console.log(maxNum([1, 56, 3, 889, 10]))
+console.log(findMissNum([1, 5, 6]))
