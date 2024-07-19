@@ -683,14 +683,26 @@
 
 // Q39 findMissNum
 
-const findMissNum = (arr) => {
-    let li = []
+// const findMissNum = (arr) => {
+//     let li = []
 
-    for (let i = 1; i <= arr.length + 1; i++) {
-        if (!arr.includes(i)) {
-            li.push(i)
-        }
-    }
-    return li
+//     for (let i = 1; i <= arr.length + 1; i++) {
+//         if (!arr.includes(i)) {
+//             li.push(i)
+//         }
+//     }
+//     return li
+// }
+// console.log(findMissNum([1, 5, 6]))
+
+
+/////////////////////////////////////////////////
+
+
+// Q40 Extract digit from string
+
+const extractDigit = (str) => {
+    let extractDigit = str.match(/\d/g, "")
+    return extractDigit.join(" ")
 }
-console.log(findMissNum([1, 5, 6]))
+console.log(extractDigit("sdbi223jds132jkmnd786ukmkdsmvkm"))
