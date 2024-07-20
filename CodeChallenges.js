@@ -713,12 +713,20 @@
 // Q41 Extract digit from string and sum of all the digits 
 
 const ExtractDigitSum = (str) => {
-    let sum = 0
-    for (let i = 0; i < str.length; i++) {
-        if (!isNaN(str[i]) && str[i] !== " ") {
-            sum += parseInt(str[i])
-        }
-    }
+    //m1
+    // let sum = 0
+    // for (let i = 0; i < str.length; i++) {
+    //     if (!isNaN(str[i]) && str[i] !== " ") {
+    //         sum += parseInt(str[i])
+    //     }
+    // }
+    // return sum
+
+    //m2
+    let extract = str.match(/\d/g)
+    let sum = extract.reduce((acc, curr) => {
+        return acc += parseInt(curr)
+    }, 0)
     return sum
 }
 
