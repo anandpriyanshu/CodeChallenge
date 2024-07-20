@@ -701,8 +701,26 @@
 
 // Q40 Extract digit from string
 
-const extractDigit = (str) => {
-    let extractDigit = str.match(/\d/g, "")
-    return extractDigit.join(" ")
+// const extractDigit = (str) => {
+//     let extractDigit = str.match(/\d/g, "")
+//     return extractDigit.join(" ")
+// }
+// console.log(extractDigit("sdbi223jds132jkmnd786ukmkdsmvkm"))
+
+
+//////////////////////////////////////
+
+// Q41 Extract digit from string and sum of all the digits 
+
+const ExtractDigitSum = (str) => {
+    let sum = 0
+    for (let i = 0; i < str.length; i++) {
+        if (!isNaN(str[i]) && str[i] !== " ") {
+            sum += parseInt(str[i])
+        }
+    }
+    return sum
 }
-console.log(extractDigit("sdbi223jds132jkmnd786ukmkdsmvkm"))
+
+console.log(ExtractDigitSum("10s9hb12jd4s67nc3km85"))
+console.log(ExtractDigitSum("1  0s9hb1  2jd4 s67nc3km8   5"))
