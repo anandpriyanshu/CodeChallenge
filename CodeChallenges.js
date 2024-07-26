@@ -737,8 +737,17 @@
 
 //Q42 reverse of string
 
-const reverseString = (str) => {
-    const rev = str.split("").reverse()
-    return rev.join("")
+// const reverseString = (str) => {
+//     const rev = str.split("").reverse()
+//     return rev.join("")
+// }
+// console.log(reverseString("Kadak"))
+
+// Q43 Largest Element in nested array
+
+const LargestInNested = (arr) => {
+    const ans = arr.flat(Infinity)
+    return Math.max(...ans)
 }
-console.log(reverseString("Kadak"))
+
+console.log(LargestInNested([1, [4, 5], [6, [8, 9, [100]]], 2, [3, 700]]))
