@@ -710,25 +710,35 @@
 
 //////////////////////////////////////
 
-// Q41 Extract digit from string and sum of all the digits 
+// Q41 Extract digit from string and sum of all the digits
 
-const ExtractDigitSum = (str) => {
-    //m1
-    // let sum = 0
-    // for (let i = 0; i < str.length; i++) {
-    //     if (!isNaN(str[i]) && str[i] !== " ") {
-    //         sum += parseInt(str[i])
-    //     }
-    // }
-    // return sum
+// const ExtractDigitSum = (str) => {
+//     //m1
+//     // let sum = 0
+//     // for (let i = 0; i < str.length; i++) {
+//     //     if (!isNaN(str[i]) && str[i] !== " ") {
+//     //         sum += parseInt(str[i])
+//     //     }
+//     // }
+//     // return sum
 
-    //m2
-    let extract = str.match(/\d/g)
-    let sum = extract.reduce((acc, curr) => {
-        return acc += parseInt(curr)
-    }, 0)
-    return sum
+//     //m2
+//     let extract = str.match(/\d/g)
+//     let sum = extract.reduce((acc, curr) => {
+//         return acc += parseInt(curr)
+//     }, 0)
+//     return sum
+// }
+
+// console.log(ExtractDigitSum("10s9hb12jd4s67nc3km85"))
+// console.log(ExtractDigitSum("1  0s9hb1  2jd4 s67nc3km8   5"))
+
+
+
+//Q42 reverse of string
+
+const reverseString = (str) => {
+    const rev = str.split("").reverse()
+    return rev.join("")
 }
-
-console.log(ExtractDigitSum("10s9hb12jd4s67nc3km85"))
-console.log(ExtractDigitSum("1  0s9hb1  2jd4 s67nc3km8   5"))
+console.log(reverseString("Kadak"))
