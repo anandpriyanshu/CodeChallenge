@@ -745,20 +745,33 @@
 
 // Q43 Largest Element in nested array
 
-const LargestInNested = (arr) => {
-    const ans = arr.flat(Infinity)
-    return Math.max(...ans)
-}
+// const LargestInNested = (arr) => {
+//     const ans = arr.flat(Infinity)
+//     return Math.max(...ans)
+// }
 
-console.log(LargestInNested([1, [4, 5], [6, [8, 9, [100]]], 2, [3, 700]]))
+// console.log(LargestInNested([1, [4, 5], [6, [8, 9, [100]]], 2, [3, 700]]))
 
 
 
 // Q44 merge two arrays
 
-const MergeArrays = (a1, a2) => {
+// const MergeArrays = (a1, a2) => {
 
-    return [...a1, ...a2].sort((a, b) => { return a - b })
+//     return [...a1, ...a2].sort((a, b) => { return a - b })
+// }
+
+// console.log(MergeArrays([1, 3, 5], [70, 6, 9]))
+
+// Q45 Sum in nested Array
+
+const sumInNested = (arr) => {
+    const ans = arr.flat(Infinity)
+    let sum = 0
+    for (let i of ans) {
+        sum += i
+    }
+    return sum
 }
 
-console.log(MergeArrays([1, 3, 5], [70, 6, 9]))
+console.log(sumInNested([1, [4, 5], [60, [8, 9, [100]]], 2, [3, 70]]))
