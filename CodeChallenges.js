@@ -751,3 +751,14 @@ const LargestInNested = (arr) => {
 }
 
 console.log(LargestInNested([1, [4, 5], [6, [8, 9, [100]]], 2, [3, 700]]))
+
+
+
+// Q44 merge two arrays
+
+const MergeArrays = (a1, a2) => {
+
+    return [...a1, ...a2].sort((a, b) => { return a - b })
+}
+
+console.log(MergeArrays([1, 3, 5], [70, 6, 9]))
