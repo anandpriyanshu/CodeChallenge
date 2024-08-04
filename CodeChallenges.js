@@ -733,7 +733,7 @@
 // console.log(ExtractDigitSum("10s9hb12jd4s67nc3km85"))
 // console.log(ExtractDigitSum("1  0s9hb1  2jd4 s67nc3km8   5"))
 
-
+///////////////////////////////////////////////////////
 
 //Q42 reverse of string
 
@@ -753,6 +753,7 @@
 // console.log(LargestInNested([1, [4, 5], [6, [8, 9, [100]]], 2, [3, 700]]))
 
 
+///////////////////////////////////////////////
 
 // Q44 merge two arrays
 
@@ -763,15 +764,37 @@
 
 // console.log(MergeArrays([1, 3, 5], [70, 6, 9]))
 
+//////////////////////////////////////////////////////
+
+
 // Q45 Sum in nested Array
 
-const sumInNested = (arr) => {
-    const ans = arr.flat(Infinity)
-    let sum = 0
-    for (let i of ans) {
-        sum += i
-    }
-    return sum
-}
+// const sumInNested = (arr) => {
+//     const ans = arr.flat(Infinity)
+//     let sum = 0
+//     for (let i of ans) {
+//         sum += i
+//     }
+//     return sum
+// }
+// console.log(sumInNested([1, [4, 5], [60, [8, 9, [100]]], 2, [3, 70]]))
 
-console.log(sumInNested([1, [4, 5], [60, [8, 9, [100]]], 2, [3, 70]]))
+
+/////////////////////////////////////////////////
+
+// Q46 Check Perfect squre
+
+const PerfectSqure = (num) => {
+    if (num <= 0) {
+        return false
+    }
+    let i = 0
+    while (i * i <= num) {
+        if (i * i == num) {
+            return true
+        }
+        i++
+    }
+    return false
+}
+console.log(PerfectSqure(4))
