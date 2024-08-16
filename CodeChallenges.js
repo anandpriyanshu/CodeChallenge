@@ -804,15 +804,27 @@
 
 // Q47 convert object into string
 
-const Obj2String = (obj) => {
+// const Obj2String = (obj) => {
 
-    const Arr = Object.entries(obj)
-    const flatArr = Arr.flat(Infinity).join(" ")
-    return flatArr
+//     const Arr = Object.entries(obj)
+//     const flatArr = Arr.flat(Infinity).join(" ")
+//     return flatArr
+// }
+
+// const obj = {
+//     nam: "Anand", age: 24, city: "Ghorawal"
+// }
+
+// console.log(Obj2String(obj))
+
+
+//////////////////////////////////////////////////////
+
+// Q48  convert Arr2Obj
+
+const Arr2Obj = (arr) => {
+    const obj = Object.fromEntries(arr)
+    return obj
 }
-
-const obj = {
-    nam: "Anand", age: 24, city: "Ghorawal"
-}
-
-console.log(Obj2String(obj))
+const arr = [['nam', 'Anand'], ['age', 24], ['city', 'Ghorawal']]
+console.log(Arr2Obj(arr))
