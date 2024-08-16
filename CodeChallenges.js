@@ -784,17 +784,35 @@
 
 // Q46 Check Perfect squre
 
-const PerfectSqure = (num) => {
-    if (num <= 0) {
-        return false
-    }
-    let i = 0
-    while (i * i <= num) {
-        if (i * i == num) {
-            return true
-        }
-        i++
-    }
-    return false
+// const PerfectSqure = (num) => {
+//     if (num <= 0) {
+//         return false
+//     }
+//     let i = 0
+//     while (i * i <= num) {
+//         if (i * i == num) {
+//             return true
+//         }
+//         i++
+//     }
+//     return false
+// }
+// console.log(PerfectSqure(4))
+
+
+/////////////////////////////////////////////////
+
+// Q47 convert object into string
+
+const Obj2String = (obj) => {
+
+    const Arr = Object.entries(obj)
+    const flatArr = Arr.flat(Infinity).join(" ")
+    return flatArr
 }
-console.log(PerfectSqure(4))
+
+const obj = {
+    nam: "Anand", age: 24, city: "Ghorawal"
+}
+
+console.log(Obj2String(obj))
