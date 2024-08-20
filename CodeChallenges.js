@@ -822,9 +822,25 @@
 
 // Q48  convert Arr2Obj
 
-const Arr2Obj = (arr) => {
-    const obj = Object.fromEntries(arr)
-    return obj
+// const Arr2Obj = (arr) => {
+//     const obj = Object.fromEntries(arr)
+//     return obj
+// }
+// const arr = [['nam', 'Anand'], ['age', 24], ['city', 'Ghorawal']]
+// console.log(Arr2Obj(arr))
+
+///////////////////////////////////////////////////////
+
+
+// Q49 Printsum of continuning element of array 
+
+
+const continueSum = (...nums) => {
+    let sum = 0
+    for (let i of nums) {
+        sum += i
+    }
+    return sum
 }
-const arr = [['nam', 'Anand'], ['age', 24], ['city', 'Ghorawal']]
-console.log(Arr2Obj(arr))
+
+console.log(continueSum(1, 2, 4, 5, 6))
