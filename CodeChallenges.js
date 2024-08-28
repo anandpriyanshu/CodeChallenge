@@ -848,12 +848,26 @@
 
 ////////////////////////////////////////////////////
 
-// Q51 Reverse of words
+// Q50 Reverse of words
 
 
-const ReverseOfWords = (str) => {
+// const ReverseOfWords = (str) => {
 
-    return revrse = str.split("").reverse().join('').split(" ").reverse().join(" ")
+//     return revrse = str.split("").reverse().join('').split(" ").reverse().join(" ")
+// }
+
+// console.log(ReverseOfWords(" Priyanshu Anand"))
+
+
+// Q51 find Anagram in string
+
+
+const isAnagram = (s1, s2) => {
+
+    let ls1 = s1.toLowerCase().split("").sort().join('')
+    let ls2 = s2.toLowerCase().split("").sort().join('')
+
+    return ls1 === ls2
+
 }
-
-console.log(ReverseOfWords("I am Priyanshu Anand. I live in  Ghorawal"))
+console.log(isAnagram("Army", 'Mary'))
