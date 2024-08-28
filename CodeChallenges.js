@@ -832,15 +832,28 @@
 ///////////////////////////////////////////////////////
 
 
-// Q49 Printsum of continuning element of array 
+// Q49 Printsum of continuning element of array
 
 
-const continueSum = (...nums) => {
-    let sum = 0
-    for (let i of nums) {
-        sum += i
-    }
-    return sum
+// const continueSum = (...nums) => {
+//     let sum = 0
+//     for (let i of nums) {
+//         sum += i
+//     }
+//     return sum
+// }
+
+// console.log(continueSum(1, 2, 4, 5, 6))
+
+
+////////////////////////////////////////////////////
+
+// Q51 Reverse of words
+
+
+const ReverseOfWords = (str) => {
+
+    return revrse = str.split("").reverse().join('').split(" ").reverse().join(" ")
 }
 
-console.log(continueSum(1, 2, 4, 5, 6))
+console.log(ReverseOfWords("I am Priyanshu Anand. I live in  Ghorawal"))
