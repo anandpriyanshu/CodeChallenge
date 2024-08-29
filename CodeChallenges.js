@@ -862,12 +862,38 @@
 // Q51 find Anagram in string
 
 
-const isAnagram = (s1, s2) => {
+// const isAnagram = (s1, s2) => {
 
-    let ls1 = s1.toLowerCase().split("").sort().join('')
-    let ls2 = s2.toLowerCase().split("").sort().join('')
+//     let ls1 = s1.toLowerCase().split("").sort().join('')
+//     let ls2 = s2.toLowerCase().split("").sort().join('')
+//     return ls1 === ls2
 
-    return ls1 === ls2
+// }
+// console.log(isAnagram("Army", 'Mary'))
 
+////////////////////////////////////
+
+// Q52 sum of num
+
+// const sumOfDigit = (num) => {
+//     let arr = Array.from(String(num), Number)
+//     return arr.reduce((acc, curr) => acc + curr, 0)
+// }
+// console.log(sumOfDigit(123458))
+
+
+//////////////////////////////////////////////////////
+
+
+//Q53 In Array, loop in the original property of array
+
+
+Array.prototype.extraVal = 'Anand'
+
+const newArray = [2, 1, 4, 3, 6, 5]
+
+for (let i in newArray) {
+    if (newArray.hasOwnProperty(i)) {
+        console.log(i)
+    }
 }
-console.log(isAnagram("Army", 'Mary'))
