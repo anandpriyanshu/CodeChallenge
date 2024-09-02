@@ -875,8 +875,26 @@
 
 // Q52 sum of num
 
-const sumOfDigit = (num) => {
-    let arr = Array.from(String(num), Number)
-    return arr.reduce((acc, curr) => acc + curr, 0)
+// const sumOfDigit = (num) => {
+//     let arr = Array.from(String(num), Number)
+//     return arr.reduce((acc, curr) => acc + curr, 0)
+// }
+// console.log(sumOfDigit(123458))
+
+
+
+//////////////////////////////////////////////////////////////
+
+
+// Q53 In Array, loop in the original property of array
+
+
+Array.prototype.extraVal = 'Anand'
+
+const newArray = [2, 1, 4, 3, 6, 5]
+
+for (let i in newArray) {
+    if (newArray.hasOwnProperty(i)) {
+        console.log(i)
+    }
 }
-console.log(sumOfDigit(123458))
