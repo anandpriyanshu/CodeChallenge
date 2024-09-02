@@ -885,7 +885,7 @@
 //////////////////////////////////////////////////////
 
 
-//Q53 In Array, loop in the original property of array
+// Q53 In Array, loop in the original property of array
 
 
 Array.prototype.extraVal = 'Anand'
