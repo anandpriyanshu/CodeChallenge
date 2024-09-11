@@ -961,26 +961,47 @@
 
 // Q56 Implement the Polyfil(custom method) of reduce method
 
-Array.prototype.myReduce = function (cb, initialValue) {
+// Array.prototype.myReduce = function (cb, initialValue) {
 
-    var accumalator = initialValue
+//     var accumalator = initialValue
 
-    for (let i = 0; i < this.length; i++) {
+//     for (let i = 0; i < this.length; i++) {
 
-        accumalator = accumalator ? cb(accumalator, this[i], i, this) : this[i]
+//         accumalator = accumalator ? cb(accumalator, this[i], i, this) : this[i]
 
+//     }
+//     return accumalator
+
+// }
+
+// // // // example:
+// const nums = [2, 13, 1, 24]
+
+// const SumofEle = nums.myReduce((acc, curr, i, arr) => {
+
+//     return acc + curr
+// }, 0)
+
+
+// console.log(SumofEle)
+
+
+
+// Q57 Return total marks for students with marks greater than 60 after 20 marks have been added to those who scored less than 60.
+
+let students = [
+    { name: 'anand', rollNumber: 23, marks: 35 },
+    { name: 'shanu', rollNumber: 43, marks: 75 },
+    { name: 'gullu', rollNumber: 33, marks: 45 },
+    { name: 'hscool', rollNumber: 23, marks: 85 },
+]
+
+const totalMarks = students.map((stu) => {
+    if (stu.marks < 50) {
+        stu.marks += 20
     }
-    return accumalator
-
-}
-
-// // // example:
-const nums = [2, 13, 1, 24]
-
-const SumofEle = nums.myReduce((acc, curr, i, arr) => {
-
-    return acc + curr
-}, 0)
+    return stu
+}).filter((stu) => stu.marks > 60).reduce((acc, curr) => acc + curr.marks, 0)
 
 
-console.log(SumofEle)
+console.log(totalMarks)
