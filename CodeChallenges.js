@@ -907,21 +907,52 @@
 
 
 
-Array.prototype.myMap = function (cb) {
+// Array.prototype.myMap = function (cb) {
+
+//     let emptyArray = []
+
+//     for (let i = 0; i < this.length; i++) {
+//         emptyArray.push(cb(this[i], i, this))
+
+//     }
+//     return emptyArray
+// }
+
+// // example:
+// const nums = [2, 3, 1, 4]
+// const multiby2 = nums.myMap((num) => {
+//     return num * 2
+// })
+
+// console.log(multiby2)
+
+
+
+////////////////////////////////////////////////////////
+
+
+
+// Q55 Implement the Polyfil(custom method) of filter method
+
+Array.prototype.myFilter = function (cb) {
 
     let emptyArray = []
-
     for (let i = 0; i < this.length; i++) {
-        emptyArray.push(cb(this[i], i, this))
 
+        if (cb(this[i], i, this)) emptyArray.push(this[i])
     }
+
     return emptyArray
 }
 
-// example: 
-const nums = [2, 3, 1, 4]
-const multiby2 = nums.myMap((num) => {
-    return num * 2
+// // example:
+const nums = [2, 13, 1, 24]
+
+let moreThan5 = nums.myFilter((num) => {
+
+    return num > 3
 })
 
-console.log(multiby2)
+console.log(moreThan5)
+
+
