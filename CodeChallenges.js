@@ -889,12 +889,39 @@
 // Q53 In Array, loop in the original property of array
 
 
-Array.prototype.extraVal = 'Anand'
+// Array.prototype.extraVal = 'Anand'
 
-const newArray = [2, 1, 4, 3, 6, 5]
+// const newArray = [2, 1, 4, 3, 6, 5]
 
-for (let i in newArray) {
-    if (newArray.hasOwnProperty(i)) {
-        console.log(i)
+// for (let i in newArray) {
+//     if (newArray.hasOwnProperty(i)) {
+//         console.log(i)
+//     }
+// }
+
+
+//////////////////////////////////////////////////////////
+
+
+// Q54 Implement the Polyfil(custom method) of map method
+
+
+
+Array.prototype.myMap = function (cb) {
+
+    let emptyArray = []
+
+    for (let i = 0; i < this.length; i++) {
+        emptyArray.push(cb(this[i], i, this))
+
     }
+    return emptyArray
 }
+
+// example: 
+const nums = [2, 3, 1, 4]
+const multiby2 = nums.myMap((num) => {
+    return num * 2
+})
+
+console.log(multiby2)
