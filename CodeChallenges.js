@@ -934,25 +934,53 @@
 
 // Q55 Implement the Polyfil(custom method) of filter method
 
-Array.prototype.myFilter = function (cb) {
+// Array.prototype.myFilter = function (cb) {
 
-    let emptyArray = []
+//     let emptyArray = []
+//     for (let i = 0; i < this.length; i++) {
+
+//         if (cb(this[i], i, this)) emptyArray.push(this[i])
+//     }
+
+//     return emptyArray
+// }
+
+// // // example:
+// const nums = [2, 13, 1, 24]
+
+// let moreThan5 = nums.myFilter((num) => {
+//     return num > 3
+// })
+
+// console.log(moreThan5)
+
+
+///////////////////////////////////////////////
+
+
+
+// Q56 Implement the Polyfil(custom method) of reduce method
+
+Array.prototype.myReduce = function (cb, initialValue) {
+
+    var accumalator = initialValue
+
     for (let i = 0; i < this.length; i++) {
 
-        if (cb(this[i], i, this)) emptyArray.push(this[i])
-    }
+        accumalator = accumalator ? cb(accumalator, this[i], i, this) : this[i]
 
-    return emptyArray
+    }
+    return accumalator
+
 }
 
-// // example:
+// // // example:
 const nums = [2, 13, 1, 24]
 
-let moreThan5 = nums.myFilter((num) => {
+const SumofEle = nums.myReduce((acc, curr, i, arr) => {
 
-    return num > 3
-})
-
-console.log(moreThan5)
+    return acc + curr
+}, 0)
 
 
+console.log(SumofEle)
