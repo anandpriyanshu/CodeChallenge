@@ -989,19 +989,28 @@
 
 // Q57 Return total marks for students with marks greater than 60 after 20 marks have been added to those who scored less than 60.
 
-let students = [
-    { name: 'anand', rollNumber: 23, marks: 35 },
-    { name: 'shanu', rollNumber: 43, marks: 75 },
-    { name: 'gullu', rollNumber: 33, marks: 45 },
-    { name: 'hscool', rollNumber: 23, marks: 85 },
-]
+// let students = [
+//     { name: 'anand', rollNumber: 23, marks: 35 },
+//     { name: 'shanu', rollNumber: 43, marks: 75 },
+//     { name: 'gullu', rollNumber: 33, marks: 45 },
+//     { name: 'hscool', rollNumber: 23, marks: 85 },
+// ]
 
-const totalMarks = students.map((stu) => {
-    if (stu.marks < 50) {
-        stu.marks += 20
-    }
-    return stu
-}).filter((stu) => stu.marks > 60).reduce((acc, curr) => acc + curr.marks, 0)
+// const totalMarks = students.map((stu) => {
+//     if (stu.marks < 50) {
+//         stu.marks += 20
+//     }
+//     return stu
+// }).filter((stu) => stu.marks > 60).reduce((acc, curr) => acc + curr.marks, 0)
 
 
-console.log(totalMarks)
+// console.log(totalMarks)
+
+
+
+// Q58 how to declare the variable  without using var,let and const
+
+if (true) {
+    variable = 10
+}
+console.log(variable)
