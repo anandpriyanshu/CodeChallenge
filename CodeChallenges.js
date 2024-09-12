@@ -1010,7 +1010,33 @@
 
 // Q58 how to declare the variable  without using var,let and const
 
-if (true) {
-    variable = 10
+// if (true) {
+//     variable = 10
+// }
+// console.log(variable)
+
+
+
+//Q59
+
+
+// Q59 create func multiplyByTwo()  that  all numeric  property values  of nums by 2
+
+let nums = {
+    a: 100,
+    b: 300,
+    title: "My nums"
 }
-console.log(variable)
+
+function multiplyByTwo(obj) {
+
+    for (let key in obj) {
+        if (typeof obj[key] === 'number') {
+            obj[key] *= 2
+        }
+
+    }
+    return obj
+}
+
+console.log(multiplyByTwo(nums))
