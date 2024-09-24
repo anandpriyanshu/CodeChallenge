@@ -1022,21 +1022,38 @@
 
 // Q59 create func multiplyByTwo()  that  all numeric  property values  of nums by 2
 
-let nums = {
-    a: 100,
-    b: 300,
-    title: "My nums"
-}
+// let nums = {
+//     a: 100,
+//     b: 300,
+//     title: "My nums"
+// }
 
-function multiplyByTwo(obj) {
+// function multiplyByTwo(obj) {
 
-    for (let key in obj) {
-        if (typeof obj[key] === 'number') {
-            obj[key] *= 2
-        }
+//     for (let key in obj) {
+//         if (typeof obj[key] === 'number') {
+//             obj[key] *= 2
+//         }
 
+//     }
+//     return obj
+// }
+
+// console.log(multiplyByTwo(nums))
+
+
+
+//////////////////////////////////////////////////////////
+
+// Q60 Show only odd index  element in Array
+
+
+const showOddIndexElement = (arr) => {
+
+    return ans = arr.filter((curr, i) => {
+        if (i % 2 !== 0) return curr
     }
-    return obj
+    )
 }
-
-console.log(multiplyByTwo(nums))
+const Arr = [10, 20, 35, 46, 62, 12, 45, 33];
+console.log(showOddIndexElement(Arr))
