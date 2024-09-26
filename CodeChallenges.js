@@ -1048,12 +1048,24 @@
 // Q60 Show only odd index  element in Array
 
 
-const showOddIndexElement = (arr) => {
+// const showOddIndexElement = (arr) => {
 
-    return ans = arr.filter((curr, i) => {
-        if (i % 2 !== 0) return curr
-    }
-    )
+//     return ans = arr.filter((curr, i) => {
+//         if (i % 2 !== 0) return curr
+//     }
+//     )
+// }
+// const Arr = [10, 20, 35, 46, 62, 12, 45, 33];
+// console.log(showOddIndexElement(Arr))
+
+
+
+// Q61 remove falsy values from  array
+
+const removeFalsy = (arr) => {
+
+    return arr.filter(Boolean)
+
 }
-const Arr = [10, 20, 35, 46, 62, 12, 45, 33];
-console.log(showOddIndexElement(Arr))
+
+console.log(removeFalsy([0, 1, false, 2, '', 3, null, undefined, NaN]))
