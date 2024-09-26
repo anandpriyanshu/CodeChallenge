@@ -1064,7 +1064,8 @@
 
 const removeFalsy = (arr) => {
 
-    return arr.filter(Boolean)
+    // return arr.filter(Boolean)
+    return arr.filter(item => item)
 
 }
 
