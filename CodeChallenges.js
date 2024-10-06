@@ -1062,11 +1062,37 @@
 
 // Q61 remove falsy values from  array
 
-const removeFalsy = (arr) => {
+// const removeFalsy = (arr) => {
 
-    // return arr.filter(Boolean)
-    return arr.filter(item => item)
+//     // return arr.filter(Boolean)
+//     return arr.filter(item => item)
 
+// }
+
+// console.log(removeFalsy([0, 1, false, 2, '', 3, null, undefined, NaN]))
+
+
+
+///////////////////////////////////////
+
+
+// Q62 find second largest elemnet in array 
+
+const findSencondLargest = (arr) => {
+
+    let l = 0, s = 0
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] > l) {
+            s = l
+            l = arr[i]
+        } else {
+            if (arr[i] > s && arr[i] !== l) {
+                s = arr[i]
+            }
+        }
+    }
+    return s === 0 ? 'Please write atleast two elements first ' : s
 }
 
-console.log(removeFalsy([0, 1, false, 2, '', 3, null, undefined, NaN]))
+console.log(findSencondLargest([2, 3, 4, 1, 3, 66, 28]))
