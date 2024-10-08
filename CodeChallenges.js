@@ -898,6 +898,13 @@
 //         console.log(i)
 //     }
 // }
+// const newArray = [2, 1, 4, 3, 6, 5]
+
+// for (let i in newArray) {
+//     if (newArray.hasOwnProperty(i)) {
+//         console.log(i)
+//     }
+// }
 
 
 //////////////////////////////////////////////////////////
@@ -1076,23 +1083,51 @@
 ///////////////////////////////////////
 
 
-// Q62 find second largest elemnet in array 
+// Q62 find second largest elemnet in array
 
-const findSencondLargest = (arr) => {
+// const findSencondLargest = (arr) => {
 
-    let l = 0, s = 0
-    for (let i = 0; i < arr.length; i++) {
+//     let l = 0, s = 0
+//     for (let i = 0; i < arr.length; i++) {
 
-        if (arr[i] > l) {
-            s = l
-            l = arr[i]
-        } else {
-            if (arr[i] > s && arr[i] !== l) {
-                s = arr[i]
-            }
+//         if (arr[i] > l) {
+//             s = l
+//             l = arr[i]
+//         } else {
+//             if (arr[i] > s && arr[i] !== l) {
+//                 s = arr[i]
+//             }
+//         }
+//     }
+//     return s === 0 ? 'Please write atleast two elements first ' : s
+// }
+
+// console.log(findSencondLargest([2, 3, 4, 1, 3, 66, 28]))
+
+////////////////////////////////////////
+
+// Q63 BinarySearch in array 
+
+const binarySearch = (arr, target) => {
+
+    arr.sort((a, b) => a - b)
+
+    let s = 0
+    let e = arr.length - 1
+
+    while (s <= e) {
+        let mid = Math.floor((s + e) / 2)
+
+        if (arr[mid] > target) {
+            e = mid - 1
+        }
+        else if (arr[mid] < target) {
+            s = mid + 1
+        }
+        else {
+            return mid
         }
     }
-    return s === 0 ? 'Please write atleast two elements first ' : s
+    return 'Element is not present in this array'
 }
-
-console.log(findSencondLargest([2, 3, 4, 1, 3, 66, 28]))
+console.log(binarySearch([10, 22, 3, 7, 32], 22))
