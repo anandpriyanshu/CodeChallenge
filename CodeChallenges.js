@@ -1106,28 +1106,55 @@
 
 ////////////////////////////////////////
 
-// Q63 BinarySearch in array 
+// Q63 BinarySearch in array
 
-const binarySearch = (arr, target) => {
+// const binarySearch = (arr, target) => {
 
-    arr.sort((a, b) => a - b)
+//     arr.sort((a, b) => a - b)
 
-    let s = 0
-    let e = arr.length - 1
+//     let s = 0
+//     let e = arr.length - 1
 
-    while (s <= e) {
-        let mid = Math.floor((s + e) / 2)
+//     while (s <= e) {
+//         let mid = Math.floor((s + e) / 2)
 
-        if (arr[mid] > target) {
-            e = mid - 1
-        }
-        else if (arr[mid] < target) {
-            s = mid + 1
-        }
-        else {
-            return mid
+//         if (arr[mid] > target) {
+//             e = mid - 1
+//         }
+//         else if (arr[mid] < target) {
+//             s = mid + 1
+//         }
+//         else {
+//             return mid
+//         }
+//     }
+//     return 'Element is not present in this array'
+// }
+// console.log(binarySearch([10, 22, 3, 7, 32], 22))
+
+
+///////////////////////////////////////
+
+// Q64 find first non - repeat character  in string
+
+const firstNonRepeatingChar = (str) => {
+
+    count = {}
+
+    for (let char of str) {
+        if (char in count) {
+            count[char] += 1
+        } else {
+            count[char] = 1
         }
     }
-    return 'Element is not present in this array'
+
+    for (let i = 0; i < str.length; i++) {
+        if (count[str[i]] === 1) {
+            return str[i]
+        }
+    }
+
+    return -1
 }
-console.log(binarySearch([10, 22, 3, 7, 32], 22))
+console.log(firstNonRepeatingChar("aabccdeff"))
