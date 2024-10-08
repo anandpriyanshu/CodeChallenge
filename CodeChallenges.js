@@ -683,17 +683,19 @@
 
 // Q39 findMissNum
 
-// const findMissNum = (arr) => {
-//     let li = []
+const findMissNum = (arr) => {
+    let li = []
 
-//     for (let i = 1; i <= arr.length + 1; i++) {
-//         if (!arr.includes(i)) {
-//             li.push(i)
-//         }
-//     }
-//     return li
-// }
-// console.log(findMissNum([1, 5, 6]))
+    let maxNum = Math.max(...arr)
+
+    for (let i = 1; i <= maxNum; i++) {
+        if (!arr.includes(i)) {
+            li.push(i)
+        }
+    }
+    return li
+}
+console.log(findMissNum([1, 5, 6]))
 
 
 /////////////////////////////////////////////////
