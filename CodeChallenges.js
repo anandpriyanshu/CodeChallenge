@@ -683,19 +683,19 @@
 
 // Q39 findMissNum
 
-const findMissNum = (arr) => {
-    let li = []
+// const findMissNum = (arr) => {
+//     let li = []
 
-    let maxNum = Math.max(...arr)
+//     let maxNum = Math.max(...arr)
 
-    for (let i = 1; i <= maxNum; i++) {
-        if (!arr.includes(i)) {
-            li.push(i)
-        }
-    }
-    return li
-}
-console.log(findMissNum([1, 5, 6]))
+//     for (let i = 1; i <= maxNum; i++) {
+//         if (!arr.includes(i)) {
+//             li.push(i)
+//         }
+//     }
+//     return li
+// }
+// console.log(findMissNum([1, 5, 6]))
 
 
 /////////////////////////////////////////////////
@@ -1139,24 +1139,35 @@ console.log(findMissNum([1, 5, 6]))
 
 // Q64 find first non - repeat character  in string
 
-const firstNonRepeatingChar = (str) => {
+// const firstNonRepeatingChar = (str) => {
 
-    count = {}
+//     count = {}
 
-    for (let char of str) {
-        if (char in count) {
-            count[char] += 1
-        } else {
-            count[char] = 1
-        }
-    }
+//     for (let char of str) {
+//         if (char in count) {
+//             count[char] += 1
+//         } else {
+//             count[char] = 1
+//         }
+//     }
 
-    for (let i = 0; i < str.length; i++) {
-        if (count[str[i]] === 1) {
-            return str[i]
-        }
-    }
+//     for (let i = 0; i < str.length; i++) {
+//         if (count[str[i]] === 1) {
+//             return str[i]
+//         }
+//     }
 
-    return -1
+//     return -1
+// }
+// console.log(firstNonRepeatingChar("aabccdeff"))
+
+
+
+// Q65 remove even elment 
+
+const RemoveEle = () => {
+    return arr.filter((curr) => curr % 2 !== 0)
 }
-console.log(firstNonRepeatingChar("aabccdeff"))
+
+const arr = [1, 2, 3, 4, 5, 6];
+console.log(RemoveEle(arr));
