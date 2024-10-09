@@ -1163,11 +1163,27 @@
 
 
 
-// Q65 remove even elment 
+// Q65 remove even elment
 
-const RemoveEle = () => {
-    return arr.filter((curr) => curr % 2 !== 0)
+// const RemoveEle = () => {
+//     return arr.filter((curr) => curr % 2 !== 0)
+// }
+
+// const arr = [1, 2, 3, 4, 5, 6];
+// console.log(RemoveEle(arr));
+
+
+
+// Q66 COnvert the object keys into Array 
+
+
+const ObjectKeys2Array = (obj) => {
+
+    return Object.keys(obj)
 }
 
-const arr = [1, 2, 3, 4, 5, 6];
-console.log(RemoveEle(arr));
+const obj = {
+    nam: "Anand", age: 24, city: "Noida"
+}
+
+console.log(ObjectKeys2Array(obj))
