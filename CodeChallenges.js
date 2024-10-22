@@ -860,6 +860,28 @@
 
 // console.log(ReverseOfWords(" Priyanshu Anand"))
 
+// m2 Reverse of words without using split() and reverse method 
+
+const ReverseOfWords = (str) => {
+
+    let revWord = ''
+    let currWord = ''
+    for (let i = 0; i <= str.length; i++) {
+        if (str[i] === ' ' || i === str.length) {
+            if (revWord) {
+                revWord = currWord + ' ' + revWord
+            } else {
+                revWord = currWord
+            }
+            currWord = ''
+        } else {
+            currWord += str[i]
+        }
+    }
+    return revWord
+
+}
+console.log(ReverseOfWords("My name is  Anand"))
 
 // Q51 find Anagram in string
 
@@ -1054,7 +1076,7 @@
 
 //////////////////////////////////////////////////////////
 
-// Q60 Show only odd index  element in Array
+// Q60 Show only odd index element in Array
 
 
 // const showOddIndexElement = (arr) => {
@@ -1174,16 +1196,16 @@
 
 
 
-// Q66 COnvert the object keys into Array 
+// Q66 Convert the object keys into Array
 
 
-const ObjectKeys2Array = (obj) => {
+// const ObjectKeys2Array = (obj) => {
 
-    return Object.keys(obj)
-}
+//     return Object.keys(obj)
+// }
 
-const obj = {
-    nam: "Anand", age: 24, city: "Noida"
-}
+// const obj = {
+//     nam: "Anand", age: 24, city: "Noida"
+// }
 
-console.log(ObjectKeys2Array(obj))
+// console.log(ObjectKeys2Array(obj))
