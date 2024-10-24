@@ -1209,3 +1209,13 @@ console.log(ReverseOfWords("My name is  Anand"))
 // }
 
 // console.log(ObjectKeys2Array(obj))
+
+
+//Q67 Extract only String from array
+
+function onlyString(arr) {
+    return arr.filter((item) => typeof item === 'string')
+}
+
+const BoxValue = [8, 1, 2, 'apple', 5, 'mango', undefined, -1, null, NaN]
+console.log(onlyString(BoxValue))
