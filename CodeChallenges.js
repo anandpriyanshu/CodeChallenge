@@ -1213,9 +1213,29 @@ console.log(ReverseOfWords("My name is  Anand"))
 
 //Q67 Extract only String from array
 
-function onlyString(arr) {
-    return arr.filter((item) => typeof item === 'string')
-}
+// function onlyString(arr) {
+//     return arr.filter((item) => typeof item === 'string')
+// }
 
-const BoxValue = [8, 1, 2, 'apple', 5, 'mango', undefined, -1, null, NaN]
-console.log(onlyString(BoxValue))
+// const BoxValue = [8, 1, 2, 'apple', 5, 'mango', undefined, -1, null, NaN]
+// console.log(onlyString(BoxValue))
+
+
+// Q68 Nested array into plain Array 
+
+const Nested2PlainArray = (arr) => {
+
+    return arr.reduce((acc, curr) => {
+
+        if (Array.isArray(curr)) {
+            acc = acc.concat(Nested2PlainArray(curr))
+
+        } else {
+            acc.push(curr)
+        }
+        return acc
+    }, [])
+
+}
+const nestedArray = [1, [2, [3, 4], 5], [6, 7]];
+console.log(Nested2PlainArray(nestedArray))
