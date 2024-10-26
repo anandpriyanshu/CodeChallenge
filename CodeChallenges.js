@@ -1221,21 +1221,46 @@ console.log(ReverseOfWords("My name is  Anand"))
 // console.log(onlyString(BoxValue))
 
 
-// Q68 Nested array into plain Array 
+// Q68 Nested array into plain Array
 
-const Nested2PlainArray = (arr) => {
+// const Nested2PlainArray = (arr) => {
 
-    return arr.reduce((acc, curr) => {
+//     return arr.reduce((acc, curr) => {
 
-        if (Array.isArray(curr)) {
-            acc = acc.concat(Nested2PlainArray(curr))
+//         if (Array.isArray(curr)) {
+//             acc = acc.concat(Nested2PlainArray(curr))
 
-        } else {
-            acc.push(curr)
+//         } else {
+//             acc.push(curr)
+//         }
+//         return acc
+//     }, [])
+
+// }
+// const nestedArray = [1, [2, [3, 4], 5], [6, 7]];
+// console.log(Nested2PlainArray(nestedArray))
+
+
+// Q69 sort array of object by property 
+
+
+const sortByProperty = (arr, property) => {
+
+    return arr.sort((a, b) => {
+        if (a[property] < b[property]) {
+            return -1
         }
-        return acc
-    }, [])
-
+        if (a[property] > b[property]) {
+            return 1
+        }
+        return 0
+    })
 }
-const nestedArray = [1, [2, [3, 4], 5], [6, 7]];
-console.log(Nested2PlainArray(nestedArray))
+
+const people = [
+    { name: "Alice", age: 30 },
+    { name: "Bob", age: 25 },
+    { name: "Charlie", age: 35 }
+];
+const sortedArraybyProperty = sortByProperty(people, 'age')
+console.log(sortedArraybyProperty)
