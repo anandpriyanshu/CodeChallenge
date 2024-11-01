@@ -899,17 +899,17 @@
 
 // Q52 sum of num
 
-const sumOfDigit = (num) => {
+// const sumOfDigit = (num) => {
 
-    if (num == 0) {
-        return 0
-    }
-    return num % 10 + sumOfDigit(Math.floor(num / 10))
+//     if (num == 0) {
+//         return 0
+//     }
+//     return num % 10 + sumOfDigit(Math.floor(num / 10))
 
-    // let arr = Array.from(String(num), Number)
-    // return arr.reduce((acc, curr) => acc + curr, 0)
-}
-console.log(sumOfDigit(123458))
+//     // let arr = Array.from(String(num), Number)
+//     // return arr.reduce((acc, curr) => acc + curr, 0)
+// }
+// console.log(sumOfDigit(123458))
 
 
 
@@ -1250,23 +1250,37 @@ console.log(sumOfDigit(123458))
 // Q69 sort array of object by property 
 
 
-const sortByProperty = (arr, property) => {
+// const sortByProperty = (arr, property) => {
 
-    return arr.sort((a, b) => {
-        if (a[property] < b[property]) {
-            return -1
-        }
-        if (a[property] > b[property]) {
-            return 1
-        }
-        return 0
-    })
+//     return arr.sort((a, b) => {
+//         if (a[property] < b[property]) {
+//             return -1
+//         }
+//         if (a[property] > b[property]) {
+//             return 1
+//         }
+//         return 0
+//     })
+// }
+
+// const people = [
+//     { name: "Alice", age: 30 },
+//     { name: "Bob", age: 25 },
+//     { name: "Charlie", age: 35 }
+// ];
+// const sortedArraybyProperty = sortByProperty(people, 'age')
+// console.log(sortedArraybyProperty)
+
+
+
+// Q70  Count nums of zero 
+
+const countsZeros = (n) => {
+    if (n === 0) return 0
+    let NumofZero = countsZeros(Math.floor(n / 10))
+    if (n % 10 === 0) {
+        NumofZero += 1
+    }
+    return NumofZero
 }
-
-const people = [
-    { name: "Alice", age: 30 },
-    { name: "Bob", age: 25 },
-    { name: "Charlie", age: 35 }
-];
-const sortedArraybyProperty = sortByProperty(people, 'age')
-console.log(sortedArraybyProperty)
+console.log(countsZeros(120106050400809))
