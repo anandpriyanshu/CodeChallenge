@@ -862,26 +862,26 @@
 
 // m2 Reverse of words without using split() and reverse method 
 
-const ReverseOfWords = (str) => {
+// const ReverseOfWords = (str) => {
 
-    let revWord = ''
-    let currWord = ''
-    for (let i = 0; i <= str.length; i++) {
-        if (str[i] === ' ' || i === str.length) {
-            if (revWord) {
-                revWord = currWord + ' ' + revWord
-            } else {
-                revWord = currWord
-            }
-            currWord = ''
-        } else {
-            currWord += str[i]
-        }
-    }
-    return revWord
+//     let revWord = ''
+//     let currWord = ''
+//     for (let i = 0; i <= str.length; i++) {
+//         if (str[i] === ' ' || i === str.length) {
+//             if (revWord) {
+//                 revWord = currWord + ' ' + revWord
+//             } else {
+//                 revWord = currWord
+//             }
+//             currWord = ''
+//         } else {
+//             currWord += str[i]
+//         }
+//     }
+//     return revWord
 
-}
-console.log(ReverseOfWords("My name is  Anand"))
+// }
+// console.log(ReverseOfWords("My name is  Anand"))
 
 // Q51 find Anagram in string
 
@@ -899,11 +899,17 @@ console.log(ReverseOfWords("My name is  Anand"))
 
 // Q52 sum of num
 
-// const sumOfDigit = (num) => {
-//     let arr = Array.from(String(num), Number)
-//     return arr.reduce((acc, curr) => acc + curr, 0)
-// }
-// console.log(sumOfDigit(123458))
+const sumOfDigit = (num) => {
+
+    if (num == 0) {
+        return 0
+    }
+    return num % 10 + sumOfDigit(Math.floor(num / 10))
+
+    // let arr = Array.from(String(num), Number)
+    // return arr.reduce((acc, curr) => acc + curr, 0)
+}
+console.log(sumOfDigit(123458))
 
 
 
