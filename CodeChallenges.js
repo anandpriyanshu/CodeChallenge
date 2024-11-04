@@ -860,7 +860,7 @@
 
 // console.log(ReverseOfWords(" Priyanshu Anand"))
 
-// m2 Reverse of words without using split() and reverse method 
+// m2 Reverse of words without using split() and reverse method
 
 // const ReverseOfWords = (str) => {
 
@@ -1247,7 +1247,7 @@
 // console.log(Nested2PlainArray(nestedArray))
 
 
-// Q69 sort array of object by property 
+// Q69 sort array of object by property
 
 
 // const sortByProperty = (arr, property) => {
@@ -1273,14 +1273,33 @@
 
 
 
-// Q70  Count nums of zero 
+// Q70  Count nums of zero
 
-const countsZeros = (n) => {
-    if (n === 0) return 0
-    let NumofZero = countsZeros(Math.floor(n / 10))
-    if (n % 10 === 0) {
-        NumofZero += 1
+// const countsZeros = (n) => {
+//     if (n === 0) return 0
+//     let NumofZero = countsZeros(Math.floor(n / 10))
+//     if (n % 10 === 0) {
+//         NumofZero += 1
+//     }
+//     return NumofZero
+// }
+// console.log(countsZeros(120106050400809))
+
+
+// Q71 Push zero to end in Array
+
+
+function pushZeroToEnd(arr) {
+
+    let k = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            [arr[i], arr[k]] = [arr[k], arr[i]]
+            k += 1
+        }
     }
-    return NumofZero
+    return arr
 }
-console.log(countsZeros(120106050400809))
+
+const arr = [2, 0, 0, 1, 3, 0, 0]
+console.log(pushZeroToEnd((arr)))
