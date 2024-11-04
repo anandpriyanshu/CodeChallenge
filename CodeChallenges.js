@@ -1289,17 +1289,27 @@
 // Q71 Push zero to end in Array
 
 
-function pushZeroToEnd(arr) {
+// function pushZeroToEnd(arr) {
 
-    let k = 0
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== 0) {
-            [arr[i], arr[k]] = [arr[k], arr[i]]
-            k += 1
-        }
-    }
-    return arr
+//     let k = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] !== 0) {
+//             [arr[i], arr[k]] = [arr[k], arr[i]]
+//             k += 1
+//         }
+//     }
+//     return arr
+// }
+
+// const arr = [2, 0, 0, 1, 3, 0, 0]
+// console.log(pushZeroToEnd((arr)))
+
+// Q72 FindUniqueNums 
+
+
+function FindUniqueNums(arr) {
+
+    return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num))
 }
-
-const arr = [2, 0, 0, 1, 3, 0, 0]
-console.log(pushZeroToEnd((arr)))
+const arr = [1, 2, 1, 4, 3, 4, 3, 5]
+console.log(FindUniqueNums(arr))
