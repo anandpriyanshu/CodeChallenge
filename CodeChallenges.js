@@ -1304,12 +1304,31 @@
 // const arr = [2, 0, 0, 1, 3, 0, 0]
 // console.log(pushZeroToEnd((arr)))
 
-// Q72 FindUniqueNums 
+// Q72 FindUniqueNums
 
 
-function FindUniqueNums(arr) {
+// function FindUniqueNums(arr) {
 
-    return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num))
+//     return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num))
+// }
+// const arr = [1, 2, 1, 4, 3, 4, 3, 5]
+// console.log(FindUniqueNums(arr))
+
+
+// Q73 Multiply expcept index
+
+function multplyExceptIndex(a) {
+    let result = [];
+    for (let i = 0; i < a.length; i++) {
+        let product = 1;
+        for (let j = 0; j < a.length; j++) {
+            if (i !== j) {
+                product *= a[j];
+            }
+        }
+        result.push(product);
+    }
+    return result;
 }
-const arr = [1, 2, 1, 4, 3, 4, 3, 5]
-console.log(FindUniqueNums(arr))
+const a = [1, 2, 3, 4];
+console.log(multplyExceptIndex(a)); 
