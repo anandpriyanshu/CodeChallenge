@@ -1317,18 +1317,39 @@
 
 // Q73 Multiply expcept index
 
-function multplyExceptIndex(a) {
-    let result = [];
-    for (let i = 0; i < a.length; i++) {
-        let product = 1;
-        for (let j = 0; j < a.length; j++) {
-            if (i !== j) {
-                product *= a[j];
-            }
-        }
-        result.push(product);
-    }
-    return result;
-}
-const a = [1, 2, 3, 4];
-console.log(multplyExceptIndex(a)); 
+// function multplyExceptIndex(a) {
+//     let result = [];
+//     for (let i = 0; i < a.length; i++) {
+//         let product = 1;
+//         for (let j = 0; j < a.length; j++) {
+//             if (i !== j) {
+//                 product *= a[j];
+//             }
+//         }
+//         result.push(product);
+//     }
+//     return result;
+// }
+// const a = [1, 2, 3, 4];
+// console.log(multplyExceptIndex(a));
+
+
+// Q74 Sum except index
+
+
+// function sumExceptIndex(a) {
+//     let result = []
+
+//     for (let i = 0; i < a.length; i++) {
+//         let sum = 0
+//         for (let j = 0; j < a.length; j++) {
+//             if (i !== j) {
+//                 sum += a[j]
+//             }
+//         }
+//         result.push(sum)
+//     }
+//     return result
+// }
+// const a = [1, 2, 3, 4];
+// console.log(sumExceptIndex(a)); 
