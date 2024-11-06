@@ -1307,12 +1307,24 @@
 // Q72 FindUniqueNums
 
 
-// function FindUniqueNums(arr) {
+function FindUniqueNums(arr) {
+    //m1
+    // return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num))
 
-//     return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num))
-// }
-// const arr = [1, 2, 1, 4, 3, 4, 3, 5]
-// console.log(FindUniqueNums(arr))
+    //m2
+    let d = {}
+    for (let i of arr) {
+        if (i in d) {
+            d[i] += 1
+        } else {
+            d[i] = 1
+        }
+    }
+    const UniqueNums = Object.keys(d).filter((num) => d[num] === 1)
+    return UniqueNums.join(' ')
+}
+const arr = [1, 2, 1, 4, 3, 4, 3, 5]
+console.log(FindUniqueNums(arr))
 
 
 // Q73 Multiply expcept index
