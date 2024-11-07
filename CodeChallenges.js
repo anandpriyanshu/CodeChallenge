@@ -1321,7 +1321,7 @@ function FindUniqueNums(arr) {
         }
     }
     const UniqueNums = Object.keys(d).filter((num) => d[num] === 1)
-    return UniqueNums.join(' ')
+    return UniqueNums.map((num) => parseInt(num))
 }
 const arr = [1, 2, 1, 4, 3, 4, 3, 5]
 console.log(FindUniqueNums(arr))
