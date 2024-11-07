@@ -1307,24 +1307,24 @@
 // Q72 FindUniqueNums
 
 
-function FindUniqueNums(arr) {
-    //m1
-    // return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num))
+// function FindUniqueNums(arr) {
+//     //m1
+//     // return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num))
 
-    //m2
-    let d = {}
-    for (let i of arr) {
-        if (i in d) {
-            d[i] += 1
-        } else {
-            d[i] = 1
-        }
-    }
-    const UniqueNums = Object.keys(d).filter((num) => d[num] === 1)
-    return UniqueNums.map((num) => parseInt(num))
-}
-const arr = [1, 2, 1, 4, 3, 4, 3, 5]
-console.log(FindUniqueNums(arr))
+//     //m2
+//     let d = {}
+//     for (let i of arr) {
+//         if (i in d) {
+//             d[i] += 1
+//         } else {
+//             d[i] = 1
+//         }
+//     }
+//     const UniqueNums = Object.keys(d).filter((num) => d[num] === 1)
+//     return UniqueNums.map((num) => parseInt(num))
+// }
+// const arr = [1, 2, 1, 4, 3, 4, 3, 5]
+// console.log(FindUniqueNums(arr))
 
 
 // Q73 Multiply expcept index
@@ -1365,3 +1365,28 @@ console.log(FindUniqueNums(arr))
 // }
 // const a = [1, 2, 3, 4];
 // console.log(sumExceptIndex(a)); 
+
+
+// Q75  multiply by 2 into nested object using recursive method(extension of Q59)
+
+function multiby2(obj) {
+    for (let i in obj) {
+        if (typeof obj[i] === 'number') {
+            obj[i] *= 2;
+        } else if (typeof obj[i] === 'object' && obj[i] !== null) {
+
+            multiby2(obj[i]);
+        }
+    }
+    return obj;
+}
+let nums = {
+    a: 100,
+    b: 300,
+    title: "My nums",
+    num: {
+        c: 200
+    }
+};
+
+console.log(multiby2(nums));
