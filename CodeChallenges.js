@@ -1364,29 +1364,54 @@
 //     return result
 // }
 // const a = [1, 2, 3, 4];
-// console.log(sumExceptIndex(a)); 
+// console.log(sumExceptIndex(a));
 
 
 // Q75  multiply by 2 into nested object using recursive method(extension of Q59)
 
-function multiby2(obj) {
-    for (let i in obj) {
-        if (typeof obj[i] === 'number') {
-            obj[i] *= 2;
-        } else if (typeof obj[i] === 'object' && obj[i] !== null) {
+// function multiby2(obj) {
+//     for (let i in obj) {
+//         if (typeof obj[i] === 'number') {
+//             obj[i] *= 2;
+//         } else if (typeof obj[i] === 'object' && obj[i] !== null) {
 
-            multiby2(obj[i]);
-        }
-    }
-    return obj;
-}
-let nums = {
-    a: 100,
-    b: 300,
-    title: "My nums",
-    num: {
-        c: 200
-    }
-};
+//             multiby2(obj[i]);
+//         }
+//     }
+//     return obj;
+// }
+// let nums = {
+//     a: 100,
+//     b: 300,
+//     title: "My nums",
+//     num: {
+//         c: 200
+//     }
+// };
 
-console.log(multiby2(nums));
+// console.log(multiby2(nums));
+
+
+// Q76
+
+let input = [
+
+    { id: 1, amount: null, isAmount: false },
+    { id: 2, amount: null, isAmount: false },
+    { id: 3, amount: null, isAmount: false },
+    { id: 4, amount: null, isAmount: false },
+    { id: 5, amount: null, isAmount: false },
+    { id: 6, amount: null, isAmount: false },
+    { id: 7, amount: null, isAmount: false },
+    { id: 8, amount: null, isAmount: false },
+    { id: 9, amount: null, isAmount: false },
+    { id: 10, amount: null, isAmount: false }
+]
+
+let AmountModified = input.map((num, i) => {
+    return {
+        ...num,
+        amount: i < 5 ? 100 : 50
+    }
+})
+console.log(AmountModified)
