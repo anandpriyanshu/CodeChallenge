@@ -1394,24 +1394,44 @@
 
 // Q76
 
-let input = [
+// let input = [
 
-    { id: 1, amount: null, isAmount: false },
-    { id: 2, amount: null, isAmount: false },
-    { id: 3, amount: null, isAmount: false },
-    { id: 4, amount: null, isAmount: false },
-    { id: 5, amount: null, isAmount: false },
-    { id: 6, amount: null, isAmount: false },
-    { id: 7, amount: null, isAmount: false },
-    { id: 8, amount: null, isAmount: false },
-    { id: 9, amount: null, isAmount: false },
-    { id: 10, amount: null, isAmount: false }
-]
+//     { id: 1, amount: null, isAmount: false },
+//     { id: 2, amount: null, isAmount: false },
+//     { id: 3, amount: null, isAmount: false },
+//     { id: 4, amount: null, isAmount: false },
+//     { id: 5, amount: null, isAmount: false },
+//     { id: 6, amount: null, isAmount: false },
+//     { id: 7, amount: null, isAmount: false },
+//     { id: 8, amount: null, isAmount: false },
+//     { id: 9, amount: null, isAmount: false },
+//     { id: 10, amount: null, isAmount: false }
+// ]
 
-let AmountModified = input.map((num, i) => {
-    return {
-        ...num,
-        amount: i < 5 ? 100 : 50
+// let AmountModified = input.map((num, i) => {
+//     return {
+//         ...num,
+//         amount: i < 5 ? 100 : 50
+//     }
+// })
+// console.log(AmountModified)
+
+// Q77 print unique character in my name
+
+function printUniqueCharacters(name) {
+    let unC = ''
+    for (let i = 0; i < name.length; i++) {
+        let isDublicate = false
+        for (let j = 0; j < unC.length; j++) {
+
+            if (name[i] === unC[j]) {
+                isDublicate = true
+                break
+            }
+        }
+        if (!isDublicate) unC += name[i]
     }
-})
-console.log(AmountModified)
+    return unC
+}
+
+console.log(printUniqueCharacters("Priyanshu Anand"))
