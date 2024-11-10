@@ -1459,14 +1459,37 @@
 
 // Q79 Armstrong  numbers 
 
-function ArmstrongNumber(num) {
+// function ArmstrongNumber(num) {
 
-    let arr = Array.from(String(num), Number)
-    let numDigit = arr.length
-    let sum = 0
-    for (let i of arr) {
-        sum += i ** numDigit
+//     let arr = Array.from(String(num), Number)
+//     let numDigit = arr.length
+//     let sum = 0
+//     for (let i of arr) {
+//         sum += i ** numDigit
+//     }
+//     return sum === num
+// }
+// console.log(ArmstrongNumber(4679307774))
+
+
+
+// Q80 two sum 
+
+function ResultAdd(nums, target) {
+
+    let s = 0
+    let e = nums.length - 1
+    while (s <= e) {
+
+        if (nums[s] + nums[e] > target) {
+            e = e - 1
+        } else if (nums[s] + nums[e] < target) {
+            s = s + 1
+        } else {
+            return [s, e]
+        }
     }
-    return sum === num
 }
-console.log(ArmstrongNumber(4679307774))
+
+nums = [2, 7, 11, 15]
+console.log(ResultAdd(nums, 26))
