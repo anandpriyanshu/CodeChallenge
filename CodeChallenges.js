@@ -1440,18 +1440,33 @@
 // Q78 Kadane’s Algorithm
 
 
-function maxSubArray() {
+// function maxSubArray() {
 
-    let maxNum = arr[0]
-    let curSum = 0
-    for (let i = 0; i < arr.length; i++) {
-        curSum += arr[i]
-        maxNum = Math.floor(curSum, maxNum)
+//     let maxNum = arr[0]
+//     let curSum = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         curSum += arr[i]
+//         maxNum = Math.floor(curSum, maxNum)
 
-        if (curSum < 0) curSum = 0
+//         if (curSum < 0) curSum = 0
+//     }
+//     return maxNum
+// }
+
+// const arr = [2, 3, -8, 7, -1, 2, 3];
+// console.log(maxSubArray(arr))
+
+
+// Q79 Armstrong  numbers 
+
+function ArmstrongNumber(num) {
+
+    let arr = Array.from(String(num), Number)
+    let numDigit = arr.length
+    let sum = 0
+    for (let i of arr) {
+        sum += i ** numDigit
     }
-    return maxNum
+    return sum === num
 }
-
-const arr = [2, 3, -8, 7, -1, 2, 3];
-console.log(maxSubArray(arr))
+console.log(ArmstrongNumber(4679307774))
