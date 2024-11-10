@@ -1418,20 +1418,40 @@
 
 // Q77 print unique character in my name
 
-function printUniqueCharacters(name) {
-    let unC = ''
-    for (let i = 0; i < name.length; i++) {
-        let isDublicate = false
-        for (let j = 0; j < unC.length; j++) {
+// function printUniqueCharacters(name) {
+//     let unC = ''
+//     for (let i = 0; i < name.length; i++) {
+//         let isDublicate = false
+//         for (let j = 0; j < unC.length; j++) {
 
-            if (name[i] === unC[j]) {
-                isDublicate = true
-                break
-            }
-        }
-        if (!isDublicate) unC += name[i]
+//             if (name[i] === unC[j]) {
+//                 isDublicate = true
+//                 break
+//             }
+//         }
+//         if (!isDublicate) unC += name[i]
+//     }
+//     return unC
+// }
+
+// console.log(printUniqueCharacters("Priyanshu Anand"))
+
+
+// Q78 Kadane’s Algorithm
+
+
+function maxSubArray() {
+
+    let maxNum = arr[0]
+    let curSum = 0
+    for (let i = 0; i < arr.length; i++) {
+        curSum += arr[i]
+        maxNum = Math.floor(curSum, maxNum)
+
+        if (curSum < 0) curSum = 0
     }
-    return unC
+    return maxNum
 }
 
-console.log(printUniqueCharacters("Priyanshu Anand"))
+const arr = [2, 3, -8, 7, -1, 2, 3];
+console.log(maxSubArray(arr))
