@@ -1457,7 +1457,7 @@
 // console.log(maxSubArray(arr))
 
 
-// Q79 Armstrong  numbers 
+// Q79 Armstrong  numbers
 
 // function ArmstrongNumber(num) {
 
@@ -1473,23 +1473,37 @@
 
 
 
-// Q80 two sum 
+// Q80 two sum
 
-function ResultAdd(nums, target) {
+// function ResultAdd(nums, target) {
 
-    let s = 0
-    let e = nums.length - 1
-    while (s <= e) {
+//     let s = 0
+//     let e = nums.length - 1
+//     while (s <= e) {
 
-        if (nums[s] + nums[e] > target) {
-            e = e - 1
-        } else if (nums[s] + nums[e] < target) {
-            s = s + 1
-        } else {
-            return [s, e]
-        }
+//         if (nums[s] + nums[e] > target) {
+//             e = e - 1
+//         } else if (nums[s] + nums[e] < target) {
+//             s = s + 1
+//         } else {
+//             return [s, e]
+//         }
+//     }
+// }
+
+// nums = [2, 7, 11, 15]
+// console.log(ResultAdd(nums, 26))
+
+
+// Q81 SwapString
+
+function RevString(str) {
+    str = str.split('');
+    for (let i = 0; i < Math.floor(str.length / 2); i++) {
+        [str[i], str[str.length - 1 - i]] = [str[str.length - 1 - i], str[i]];
     }
+    return str.join('');
 }
-
-nums = [2, 7, 11, 15]
-console.log(ResultAdd(nums, 26))
+let originalString = "My name Priyanshu  Anand!";
+let RevStr = RevString(originalString);
+console.log(RevStr)
