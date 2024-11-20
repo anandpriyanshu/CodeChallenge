@@ -1418,23 +1418,28 @@
 
 // Q77 print unique character in my name
 
-// function printUniqueCharacters(name) {
-//     let unC = ''
-//     for (let i = 0; i < name.length; i++) {
-//         let isDublicate = false
-//         for (let j = 0; j < unC.length; j++) {
+function printUniqueCharacters(name) {
+    //m1
+    //     let unC = ''
+    //     for (let i = 0; i < name.length; i++) {
+    //         let isDublicate = false
+    //         for (let j = 0; j < unC.length; j++) {
 
-//             if (name[i] === unC[j]) {
-//                 isDublicate = true
-//                 break
-//             }
-//         }
-//         if (!isDublicate) unC += name[i]
-//     }
-//     return unC
-// }
+    //             if (name[i] === unC[j]) {
+    //                 isDublicate = true
+    //                 break
+    //             }
+    //         }
+    //         if (!isDublicate) unC += name[i]
+    //     }
+    //     return unC
 
-// console.log(printUniqueCharacters("Priyanshu Anand"))
+    //m2
+    const a = name.split('')
+    return a.filter((curr, i) => a.indexOf(curr) === i).join('')
+}
+
+console.log(printUniqueCharacters("Priyanshu Anand"))
 
 
 // Q78 Kadane’s Algorithm
