@@ -1502,13 +1502,28 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 
 // Q81 SwapString
 
-function RevString(str) {
-    str = str.split('');
-    for (let i = 0; i < Math.floor(str.length / 2); i++) {
-        [str[i], str[str.length - 1 - i]] = [str[str.length - 1 - i], str[i]];
+// function RevString(str) {
+//     str = str.split('');
+//     for (let i = 0; i < Math.floor(str.length / 2); i++) {
+//         [str[i], str[str.length - 1 - i]] = [str[str.length - 1 - i], str[i]];
+//     }
+//     return str.join('');
+// }
+// let originalString = "My name Priyanshu  Anand!";
+// let RevStr = RevString(originalString);
+// console.log(RevStr)
+
+
+// Q81 normal array to flat array 
+
+function Normal2flatArray(arr) {
+    const result = []
+    for (let i = 0; i < arr.length; i = i + 2) {
+        const newArr = [arr[i], arr[i + 1]]
+        result.push(newArr)
     }
-    return str.join('');
+    return result
 }
-let originalString = "My name Priyanshu  Anand!";
-let RevStr = RevString(originalString);
-console.log(RevStr)
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(Normal2flatArray(arr))
