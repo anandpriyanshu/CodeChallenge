@@ -1516,14 +1516,30 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 
 // Q81 normal array to flat array 
 
-function Normal2flatArray(arr) {
-    const result = []
-    for (let i = 0; i < arr.length; i = i + 2) {
-        const newArr = [arr[i], arr[i + 1]]
-        result.push(newArr)
-    }
-    return result
-}
+// function Normal2flatArray(arr) {
+//     const result = []
+//     for (let i = 0; i < arr.length; i = i + 2) {
+//         const newArr = [arr[i], arr[i + 1]]
+//         result.push(newArr)
+//     }
+//     return result
+// }
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-console.log(Normal2flatArray(arr))
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(Normal2flatArray(arr))
+
+
+// Q82 find Missing and dublicate 
+
+
+function missingAndDublicate(arr) {
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== i + 1) {
+            console.log('Missing Num ', i + 1)
+            console.log('Dublicate Num ', arr[i])
+        }
+    }
+}
+const arr = [1, 2, 3, 5, 5, 6]
+console.log(missingAndDublicate(arr))
