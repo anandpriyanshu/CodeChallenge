@@ -1514,7 +1514,7 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 // console.log(RevStr)
 
 
-// Q81 normal array to flat array 
+// Q81 normal array to flat array
 
 // function Normal2flatArray(arr) {
 //     const result = []
@@ -1529,17 +1529,34 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 // console.log(Normal2flatArray(arr))
 
 
-// Q82 find Missing and dublicate 
+// Q82 find Missing and dublicate
 
 
-function missingAndDublicate(arr) {
+// function missingAndDublicate(arr) {
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== i + 1) {
-            console.log('Missing Num ', i + 1)
-            console.log('Dublicate Num ', arr[i])
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] !== i + 1) {
+//             console.log('Missing Num ', i + 1)
+//             console.log('Dublicate Num ', arr[i])
+//         }
+//     }
+// }
+// const arr = [1, 2, 3, 5, 5, 6]
+// console.log(missingAndDublicate(arr))
+
+
+// Q83 find dublicate without using javascript built-in method
+
+const findDublicate = (a) => {
+    let dublicates = []
+    for (let i = 0; i < a.length; i++) {
+        for (let j = i + 1; j < a.length; j++) {
+            if (a[i] === a[j]) {
+                dublicates.push(a[i])
+            }
         }
     }
+    return dublicates
 }
-const arr = [1, 2, 3, 5, 5, 6]
-console.log(missingAndDublicate(arr))
+const arr = [1, 2, 3, 2, 4, 1, 5]
+console.log(findDublicate(arr))
