@@ -888,12 +888,27 @@
 
 // const isAnagram = (s1, s2) => {
 
-//     let ls1 = s1.toLowerCase().split("").sort().join('')
-//     let ls2 = s2.toLowerCase().split("").sort().join('')
-//     return ls1 === ls2
+//     //     let ls1 = s1.toLowerCase().split("").sort().join('')
+//     //     let ls2 = s2.toLowerCase().split("").sort().join('')
+//     //     return ls1 === ls2
+
+//     //m2
+
+//     if(s1.length !== s2.length) return false
+
+//     let cs1 = {}
+//     let cs2 = {}
+//     for (let i = 0; i < s1.length; i++) {
+//         cs1[s1[i]] = (cs1[s1] || 0) + 1
+//         cs2[s2[i]] = (cs2[s2] || 0) + 1
+//     }
+//     for (char in cs1) {
+//         if (cs1[char] !== cs2[char]) return false
+//     }
+//     return true
 
 // }
-// console.log(isAnagram("Army", 'Mary'))
+// console.log(isAnagram("listen", 'silent'))
 
 ////////////////////////////////////
 
@@ -1547,16 +1562,16 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 
 // Q83 find dublicate without using javascript built-in method
 
-const findDublicate = (a) => {
-    let dublicates = []
-    for (let i = 0; i < a.length; i++) {
-        for (let j = i + 1; j < a.length; j++) {
-            if (a[i] === a[j]) {
-                dublicates.push(a[i])
-            }
-        }
-    }
-    return dublicates
-}
-const arr = [1, 2, 3, 2, 4, 1, 5]
-console.log(findDublicate(arr))
+// const findDublicate = (a) => {
+//     let dublicates = []
+//     for (let i = 0; i < a.length; i++) {
+//         for (let j = i + 1; j < a.length; j++) {
+//             if (a[i] === a[j]) {
+//                 dublicates.push(a[i])
+//             }
+//         }
+//     }
+//     return dublicates
+// }
+// const arr = [1, 2, 3, 2, 4, 1, 5]
+// console.log(findDublicate(arr))
