@@ -220,6 +220,22 @@
 // const removeDublicate = arr.filter((val, i, self) => {
 //     return self.indexOf(val) == i
 // })
+
+//m3
+let uNum = []
+for (let i = 0; i < a.length; i++) {
+    let isDub = false
+    for (let j = 0; j < uNum.length; j++) {
+        if (a[i] === uNum[j]) {
+            isDub = true
+            break
+        }
+
+    }
+    if (!isDub) uNum.push(a[i])
+}
+return uNum
+
 // console.log(removeDublicate)
 
 
