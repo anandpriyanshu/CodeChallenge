@@ -1605,15 +1605,36 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 
 // Q84 Return the sum of ele which is equal to target
 
-function addSum(n, t) {
-    let newArr = []
-    for (let i = 0; i < n.length; i++) {
-        if (n[i] + n[i + 1] === t) {
-            newArr.push([n[i], n[i + 1]])
+// function addSum(n, t) {
+//     let newArr = []
+//     for (let i = 0; i < n.length; i++) {
+//         if (n[i] + n[i + 1] === t) {
+//             newArr.push([n[i], n[i + 1]])
+//         }
+//     }
+//     return newArr
+// }
+// const nums = [1, 5, 7, -1, 5];
+// const target = 6;
+// console.log(addSum(nums, target))
+
+
+// Q85 Find first Nonrepeating Character in string 
+
+function firstNonRepeatChar(s) {
+    let d = {}
+    for (let i of s) {
+        if (i in d) {
+            d[i] += 1
+        } else {
+            d[i] = 1
         }
     }
-    return newArr
+    for (let i of s) {
+        if (d[i] === 1) return i
+    }
+    return null
 }
-const nums = [1, 5, 7, -1, 5];
-const target = 6;
-console.log(addSum(nums, target))
+
+const str = 'aabccdeff'
+console.log(firstNonRepeatChar(str))
