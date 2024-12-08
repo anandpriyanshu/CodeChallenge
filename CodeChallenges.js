@@ -222,19 +222,19 @@
 // })
 
 //m3
-let uNum = []
-for (let i = 0; i < a.length; i++) {
-    let isDub = false
-    for (let j = 0; j < uNum.length; j++) {
-        if (a[i] === uNum[j]) {
-            isDub = true
-            break
-        }
+// let uNum = []
+// for (let i = 0; i < a.length; i++) {
+//     let isDub = false
+//     for (let j = 0; j < uNum.length; j++) {
+//         if (a[i] === uNum[j]) {
+//             isDub = true
+//             break
+//         }
 
-    }
-    if (!isDub) uNum.push(a[i])
-}
-return uNum
+//     }
+//     if (!isDub) uNum.push(a[i])
+// }
+// return uNum
 
 // console.log(removeDublicate)
 
@@ -253,29 +253,29 @@ return uNum
 
 // Q13 countVowels
 
-const countVowels = (str) => {
-    // let vowels = ['a', 'e', 'i', 'o', 'u']
-    // let arr = str.split("")
-    // let c = 0
-    // for (let i of arr) {
-    //     // if (vowels.includes(i.toLowerCase())) {
-    //     //     c++
-    //     // }
-    //     vowels.includes(i.toLowerCase()) ? c++ : 0
-    // }
-    // return c
+// const countVowels = (str) => {
+//     // let vowels = ['a', 'e', 'i', 'o', 'u']
+//     // let arr = str.split("")
+//     // let c = 0
+//     // for (let i of arr) {
+//     //     // if (vowels.includes(i.toLowerCase())) {
+//     //     //     c++
+//     //     // }
+//     //     vowels.includes(i.toLowerCase()) ? c++ : 0
+//     // }
+//     // return c
 
-    //m2
-    const vowel = ['a', 'e', 'i', 'o', 'u']
-    let c = 0
-    for (let i of s) {
-        if (vowel.includes(i)) {
-            c++
-        }
-    }
-    return c
-}
-console.log(countVowels("The quick brown fox jump over lazy dog"))
+//     //m2
+//     const vowel = ['a', 'e', 'i', 'o', 'u']
+//     let c = 0
+//     for (let i of s) {
+//         if (vowel.includes(i)) {
+//             c++
+//         }
+//     }
+//     return c
+// }
+// console.log(countVowels("The quick brown fox jump over lazy dog"))
 
 //  using reduce method
 
@@ -1601,3 +1601,19 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 // }
 // const arr = [1, 2, 3, 2, 4, 1, 5]
 // console.log(findDublicate(arr))
+
+
+// Q84 Return the sum of ele which is equal to target
+
+function addSum(n, t) {
+    let newArr = []
+    for (let i = 0; i < n.length; i++) {
+        if (n[i] + n[i + 1] === t) {
+            newArr.push([n[i], n[i + 1]])
+        }
+    }
+    return newArr
+}
+const nums = [1, 5, 7, -1, 5];
+const target = 6;
+console.log(addSum(nums, target))
