@@ -1619,22 +1619,42 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 // console.log(addSum(nums, target))
 
 
-// Q85 Find first Nonrepeating Character in string 
+// Q85 Find first Nonrepeating Character in string
 
-function firstNonRepeatChar(s) {
-    let d = {}
-    for (let i of s) {
-        if (i in d) {
-            d[i] += 1
-        } else {
-            d[i] = 1
+// function firstNonRepeatChar(s) {
+//     let d = {}
+//     for (let i of s) {
+//         if (i in d) {
+//             d[i] += 1
+//         } else {
+//             d[i] = 1
+//         }
+//     }
+//     for (let i of s) {
+//         if (d[i] === 1) return i
+//     }
+//     return null
+// }
+
+// const str = 'aabccdeff'
+// console.log(firstNonRepeatChar(str))
+
+
+// Q86  [1,2,3,4,5,6,7,8,9,10,[11,12,13,14,15,16,17,18,19,20],null,undefine,NaN]
+
+// convert into this [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+// give sum of all the odd elements
+
+
+function fromString(a) {
+    const sum = a.flat(Infinity).filter((curr) => curr)
+    return sum.reduce((acc, curr) => {
+        if (curr % 2 !== 0) {
+            acc += curr
         }
-    }
-    for (let i of s) {
-        if (d[i] === 1) return i
-    }
-    return null
+        return acc
+    }, 0)
 }
+const nestedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [11, 12, 13, 14, 15, 16, 17, 18, 19, 20], null, undefined, NaN]
 
-const str = 'aabccdeff'
-console.log(firstNonRepeatChar(str))
+console.log(fromString(nestedArray))
