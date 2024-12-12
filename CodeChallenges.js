@@ -1646,15 +1646,37 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 // give sum of all the odd elements
 
 
-function fromString(a) {
-    const sum = a.flat(Infinity).filter((curr) => curr)
-    return sum.reduce((acc, curr) => {
-        if (curr % 2 !== 0) {
-            acc += curr
-        }
-        return acc
-    }, 0)
-}
-const nestedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [11, 12, 13, 14, 15, 16, 17, 18, 19, 20], null, undefined, NaN]
+// function fromString(a) {
+//     const sum = a.flat(Infinity).filter((curr) => curr)
+//     return sum.reduce((acc, curr) => {
+//         if (curr % 2 !== 0) {
+//             acc += curr
+//         }
+//         return acc
+//     }, 0)
+// }
+// const nestedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [11, 12, 13, 14, 15, 16, 17, 18, 19, 20], null, undefined, NaN]
 
-console.log(fromString(nestedArray))
+// console.log(fromString(nestedArray))
+
+// Q87 Group all the same type in object 
+
+const items = [
+    { name: 'Apple', type: 'fruit' },
+    { name: 'Banana', type: 'fruit' },
+    { name: 'Carrot', type: 'vegetable' },
+    { name: 'Lettuce', type: 'vegetable' },
+    { name: 'Chicken', type: 'meat' }
+];
+const groupItems = items.reduce((acc, item) => {
+    const type = item.type
+
+    if (!acc[type]) {
+        acc[type] = []
+    }
+    acc[type].push(item)
+
+    return acc
+}, {})
+
+console.log(groupItems)
