@@ -1659,24 +1659,42 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 
 // console.log(fromString(nestedArray))
 
-// Q87 Group all the same type in object 
+// Q87 Group all the same type in object
 
-const items = [
-    { name: 'Apple', type: 'fruit' },
-    { name: 'Banana', type: 'fruit' },
-    { name: 'Carrot', type: 'vegetable' },
-    { name: 'Lettuce', type: 'vegetable' },
-    { name: 'Chicken', type: 'meat' }
-];
-const groupItems = items.reduce((acc, item) => {
-    const type = item.type
+// const items = [
+//     { name: 'Apple', type: 'fruit' },
+//     { name: 'Banana', type: 'fruit' },
+//     { name: 'Carrot', type: 'vegetable' },
+//     { name: 'Lettuce', type: 'vegetable' },
+//     { name: 'Chicken', type: 'meat' }
+// ];
+// const groupItems = items.reduce((acc, item) => {
+//     const type = item.type
 
-    if (!acc[type]) {
-        acc[type] = []
+//     if (!acc[type]) {
+//         acc[type] = []
+//     }
+//     acc[type].push(item)
+
+//     return acc
+// }, {})
+
+// // console.log(groupItems)
+
+
+// Q88 find common element between two arrays
+
+function findCommon(a1, a2) {
+    let s1 = new Set(a1)
+    let s2 = new Set(a2)
+    let res = []
+    for (let i of s1) {
+        if (s2.has(i)) {
+            res.push(i)
+        }
     }
-    acc[type].push(item)
-
-    return acc
-}, {})
-
-console.log(groupItems)
+    return res
+}
+const arr1 = [1, 2, 4, 3, 4]
+const arr2 = [3, 5, 6, 4, 4]
+console.log(findCommon(arr1, arr2))
