@@ -422,7 +422,27 @@
 //             maxNum = u
 //         }
 //     }
+
+
+//m2
+// let d = {}
+// let mx = 0
+// for (let i of s) {
+//     if (i in d) {
+//         d[i] += 1
+//     } else {
+//         d[i] = 1
+//     }
+// }
+
+// for (let c in d) {
+//     if (d[c] > mx) mx = d[c]
+// }
 //     return maxNum
+
+
+
+
 // }
 
 // const arr = [1, 2, 2, 3, 1, 1, 3, 3, 4, 5, 5, 5, 5, 5, 5, 5, 5]
@@ -1459,28 +1479,28 @@
 
 // Q77 print unique character in my name
 
-function printUniqueCharacters(name) {
-    //m1
-    //     let unC = ''
-    //     for (let i = 0; i < name.length; i++) {
-    //         let isDublicate = false
-    //         for (let j = 0; j < unC.length; j++) {
+// function printUniqueCharacters(name) {
+//     //m1
+//     //     let unC = ''
+//     //     for (let i = 0; i < name.length; i++) {
+//     //         let isDublicate = false
+//     //         for (let j = 0; j < unC.length; j++) {
 
-    //             if (name[i] === unC[j]) {
-    //                 isDublicate = true
-    //                 break
-    //             }
-    //         }
-    //         if (!isDublicate) unC += name[i]
-    //     }
-    //     return unC
+//     //             if (name[i] === unC[j]) {
+//     //                 isDublicate = true
+//     //                 break
+//     //             }
+//     //         }
+//     //         if (!isDublicate) unC += name[i]
+//     //     }
+//     //     return unC
 
-    //m2
-    const a = name.split('')
-    return a.filter((curr, i) => a.indexOf(curr) === i).join('')
-}
+//     //m2
+//     const a = name.split('')
+//     return a.filter((curr, i) => a.indexOf(curr) === i).join('')
+// }
 
-console.log(printUniqueCharacters("Priyanshu Anand"))
+// console.log(printUniqueCharacters("Priyanshu Anand"))
 
 
 // Q78 Kadane’s Algorithm
@@ -1684,17 +1704,28 @@ console.log(printUniqueCharacters("Priyanshu Anand"))
 
 // Q88 find common element between two arrays
 
-function findCommon(a1, a2) {
-    let s1 = new Set(a1)
-    let s2 = new Set(a2)
-    let res = []
-    for (let i of s1) {
-        if (s2.has(i)) {
-            res.push(i)
-        }
-    }
-    return res
+// function findCommon(a1, a2) {
+//     let s1 = new Set(a1)
+//     let s2 = new Set(a2)
+//     let res = []
+//     for (let i of s1) {
+//         if (s2.has(i)) {
+//             res.push(i)
+//         }
+//     }
+//     return res
+// }
+// const arr1 = [1, 2, 4, 3, 4]
+// const arr2 = [3, 5, 6, 4, 4]
+// console.log(findCommon(arr1, arr2))
+
+
+// Q89 find min length in nested array
+
+const minLength = (a) => {
+    const subArr = a.filter((curr) => Array.isArray(curr))
+    const lengths = subArr.map((item) => item.length)
+    return Math.max(...lengths)
 }
-const arr1 = [1, 2, 4, 3, 4]
-const arr2 = [3, 5, 6, 4, 4]
-console.log(findCommon(arr1, arr2))
+const arr = [1, 2, 3, [4, 5], [6], [7, 8, 9, 10]]
+console.log(minLength(arr))
