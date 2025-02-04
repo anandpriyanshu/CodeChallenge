@@ -1036,7 +1036,7 @@
 
 //     let emptyArray = []
 //     for (let i = 0; i < this.length; i++) {
-
+// 
 //         if (cb(this[i], i, this)) emptyArray.push(this[i])
 //     }
 
@@ -1722,10 +1722,33 @@
 
 // Q89 find min length in nested array
 
-const minLength = (a) => {
-    const subArr = a.filter((curr) => Array.isArray(curr))
-    const lengths = subArr.map((item) => item.length)
-    return Math.max(...lengths)
+// const minLength = (a) => {
+//     const subArr = a.filter((curr) => Array.isArray(curr))
+//     const lengths = subArr.map((item) => item.length)
+//     return Math.max(...lengths)
+// }
+// const arr = [1, 2, 3, [4, 5], [6], [7, 8, 9, 10]]
+// console.log(minLength(arr))
+
+
+//Q90 
+//convert object to query string
+
+function objectToQueryString(obj) {
+    return new URLSearchParams(obj).toString();
 }
-const arr = [1, 2, 3, [4, 5], [6], [7, 8, 9, 10]]
-console.log(minLength(arr))
+
+const params = { name: "John", age: 30, city: "New York" };
+const queryString = objectToQueryString(params);
+console.log(queryString)
+
+
+// Q91 convert Query string to Object
+
+function queryStringToObject(queryString) {
+    return Object.fromEntries(new URLSearchParams(queryString));
+}
+const query = "name=John&age=30&city=New+York";
+const obj = queryStringToObject(query);
+console.log(obj);
+
